@@ -1,0 +1,7 @@
+github_handle,team,auto,manual,team_grade,adjustment,final,comments,team_comments
+amara-okonjo,team-alpha,,,84,+3,87,"Designed the grouped split and argued it well at the clinic; carried the evaluation section.","Strong project. The grouped CV is correctly motivated and the baseline is honest. The subgroup table needs intervals, and the model card's monitoring section is thin."
+jonas-bergstrom,team-alpha,,,84,-2,82,"Solid contribution to the pipeline; two of the three clinic actions were left to teammates.","Strong project. The grouped CV is correctly motivated and the baseline is honest. The subgroup table needs intervals, and the model card's monitoring section is thin."
+k-nowak-weiss,team-beta,,,76,+2,78,"Wrote the leakage audit that caught a post-outcome column two days before submission.","Good work, weakened by a late change of question. The report is clear and the reproducibility is exemplary, but the results section compares against no baseline."
+miguel-santos,team-beta,,,76,0,76,"Even, reliable contribution across data and modelling.","Good work, weakened by a late change of question. The report is clear and the reproducibility is exemplary, but the results section compares against no baseline."
+priya-raman,team-gamma,,,,,,,
+tomas-havel,team-gamma,,,,,,,

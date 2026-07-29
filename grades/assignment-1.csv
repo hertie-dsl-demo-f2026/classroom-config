@@ -1,0 +1,7 @@
+github_handle,team,auto,manual,team_grade,adjustment,final,comments,team_comments
+amara-okonjo,,10,4,,,93,"All ten hidden tests pass. Clean pivoting; both short answers correct.",
+jonas-bergstrom,,7,3,,,67,"Solve works but back-substitution assumes a non-zero diagonal - see the singular case. Short answer 2 conflates exact and approximate collinearity.",
+k-nowak-weiss,,9,5,,,93,"Excellent. The one failing test is the singular-matrix guard; everything else is exemplary, and the write-up is the best in the cohort.",
+miguel-santos,,5,2,,,47,"Normal equations correct, but no pivoting at all, so two tests fail on conditioning. Short answers are one sentence each - the brief asks for three to five.",
+priya-raman,,9,4,,,87,"Strong. R-squared returns 0.0 rather than a negative value in one edge case.",
+tomas-havel,,0,,,,,"No submission on or before the deadline (including the 48-hour grace window). Contact the lecturer before the next deadline.",

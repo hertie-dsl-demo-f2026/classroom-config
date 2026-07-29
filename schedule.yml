@@ -1,75 +1,162 @@
-# This cohort's schedule + auto-release plan. Edit here (GitHub web UI is fine - no CLI).
-# Everything is optional: anything you leave out is synthesised (semester start from the
-# fYYYY tag; website exams at weeks 8 & 15) or simply not scheduled. Uncomment and fill
-# what you want. Times are Europe/Berlin unless you set `timezone:` or give an explicit
-# offset; the Scheduled release cron runs hourly, so a `when:` time is honoured to the hour.
+# DSL-Demo-f2026 - this cohort's release plan AND its display/grading dates, in one file
+# (classroom-config/schedule.yml). Read this as a template: copy it, change the dates, and
+# delete what you do not use. Every field is optional; a cohort with no schedule.yml simply
+# has nothing to auto-release and gets synthesised dates on its website.
+#
+# How it fires: the hourly "Scheduled release" cron opens each entry under
+# materials_releases once its `when` has arrived. Sources are always read from the COURSE
+# org (DSL-Demo-Course-E1234), destinations always written to this COHORT org - so entries
+# name repos, never orgs.
+#
+# Full schema: docs/faculty-and-instructors/required-input-schema.md#the-schedule
 
-# timezone: Europe/Berlin              # optional - how the naive datetimes below are read
+timezone: Europe/Berlin        # optional (this is the default). Naive times below are read
+                               # in this zone; GitHub's cron itself runs in UTC, so a `when`
+                               # is honoured to the hour, not the minute.
 
-# ---------------------------------------------------------------------------
-# materials_releases: the AUTO-RELEASE plan. Each entry is a label (any name you like -
-# session_2, lab_1, bonus-dataset) mapping to a `when:` datetime and one or more actions.
-# The hourly Scheduled release cron fires each entry once its `when` has arrived
-# (idempotent - safe to re-run). Sources are always read from the COURSE org;
-# destinations always written to THIS cohort org.
-# ---------------------------------------------------------------------------
-# materials_releases:
-#
-#   session_2:                          # a normal weekly release (label is just a name)
-#     when: 2026-09-15T14:00            # bare date (2026-09-15) -> 00:00 that day
-#     deploy:                           # copy one or more paths: course repo -> cohort repo
-#       - source_repo: course-materials-f2026    # repo in the COURSE org
-#         source_path: lectures/02_intro          # folder or file to copy
-#         dest_repo: materials                     # repo in THIS cohort org (default: materials)
-#         dest_path: lectures/02_intro             # where to put it (default: same as source_path)
-#       - source_repo: course-materials-f2026
-#         source_path: readings/02_intro
-#         dest_repo: materials
-#         dest_path: readings/02_intro
-#
-#   lab_1:                              # a lab is just another release - no special section
-#     when: 2026-09-17T10:00
-#     deploy:
-#       - source_repo: course-materials-f2026
-#         source_path: labs/01_setup
-#         dest_repo: materials
-#         # dest_path omitted -> mirrors source_path (labs/01_setup)
-#
-#   bonus-dataset:                      # a one-off that isn't a numbered teaching session
-#     when: 2026-10-20T09:30
-#     deploy:
-#       - source_repo: course-datasets-f2026
-#         source_path: week7/housing.csv
-#         dest_repo: materials
-#         dest_path: datasets/housing.csv
-#
-#   assignment-1-handout:               # hand an assignment out (provision one repo/student)
-#     when: 2026-09-22T09:00
-#     assignment: assignment-1-f2026    # the assignment-*-<tag> template repo
-#
-#   assignment-1-grade:                 # run the autograder after the deadline
-#     when: 2026-10-15T00:00
-#     grade:
-#       template: assignment-1-f2026
-#       deadline: 2026-10-13T23:59      # commit cutoff (default: this assignment's due date)
-#       group: false                    # true for a group assignment
+materials_releases:
+  # ---------------------------------------------------------------- teaching sessions
+  # One entry per session: lecture, readings and lab go out together, Tuesdays 08:00,
+  # before the 10:00 class. The label is a free identifier - only `when` and the actions
+  # matter - but keeping it `session-NN` makes the Actions log readable.
+  session-01:
+    when: 2026-09-08T08:00
+    deploy:
+      - {source_repo: course-materials-f2026, source_path: lectures/01_introduction, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: readings/01_introduction, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: labs/01_introduction, dest_repo: materials}
+      # Release the package skeleton early so every later partial release still imports.
+      - {source_repo: lecture-code-f2026, source_path: pyproject.toml, dest_repo: materials, dest_path: lecture-code/pyproject.toml}
+      - {source_repo: lecture-code-f2026, source_path: README.md, dest_repo: materials, dest_path: lecture-code/README.md}
+      - {source_repo: lecture-code-f2026, source_path: mlfdemo/__init__.py, dest_repo: materials, dest_path: lecture-code/mlfdemo/__init__.py}
+      - {source_repo: lecture-code-f2026, source_path: mlfdemo/datasets.py, dest_repo: materials, dest_path: lecture-code/mlfdemo/datasets.py}
 
-# ---------------------------------------------------------------------------
-# The rest is for DISPLAY (website) and GRADING - not the release plan above.
-# ---------------------------------------------------------------------------
-# semester_start: 2026-09-07           # YYYY-MM-DD
-# semester_end: 2026-12-18
-#
-# assignments:                          # due dates (keyed by slug, no -fYYYY tag)
-#   assignment-1:
-#     due: 2026-10-13T23:59            # a bare date -> END of that day (23:59:59)
-#     grace_days: 2                     # OPTIONAL: extra days for GRADING only (not shown
-#                                       # to students). Autograder pins to due + grace_days.
-#   assignment-2:
-#     due: 2026-11-10
-#
-# exams:                                # `date` is a whole day, OR a full datetime when
-#   - name: MidTerm Exam                 # you know the start time
-#     date: 2026-11-03                  # bare date -> the website shows 09:00
-#   - name: Final Exam
-#     date: 2026-12-15T14:00            # real start time, shown as given
+  # A one-off deploy that is not a numbered session: the shared teaching dataset, landing
+  # under a different path from the one it is stored at. `datasets/` has no ordinal-prefixed
+  # subdirectories, so it is NOT a releasable section - this entry is the only way it ships.
+  housing-dataset:
+    when: 2026-09-08T08:00
+    deploy:
+      - {source_repo: course-materials-f2026, source_path: datasets/housing-mini.csv, dest_repo: materials, dest_path: data/housing-mini.csv}
+
+  session-02:
+    when: 2026-09-15T08:00
+    deploy:
+      - {source_repo: course-materials-f2026, source_path: lectures/02_linear-regression, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: readings/02_linear-regression, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: labs/02_linear-regression, dest_repo: materials}
+      # Phased disclosure: reveal a module when you teach what is in it.
+      - {source_repo: lecture-code-f2026, source_path: mlfdemo/linreg.py, dest_repo: materials, dest_path: lecture-code/mlfdemo/linreg.py}
+
+  session-03:
+    when: 2026-09-22T08:00
+    deploy:
+      - {source_repo: course-materials-f2026, source_path: lectures/03_gradient-descent, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: readings/03_gradient-descent, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: labs/03_gradient-descent, dest_repo: materials}
+      - {source_repo: lecture-code-f2026, source_path: mlfdemo/plotting.py, dest_repo: materials, dest_path: lecture-code/mlfdemo/plotting.py}
+
+  # Assignment handouts: one private repo per enrolled student, generated from the template.
+  # Auditors are skipped automatically.
+  assignment-1-handout:
+    when: 2026-09-22T14:00
+    assignment: assignment-1-f2026
+
+  session-04:
+    when: 2026-09-29T08:00
+    deploy:
+      - {source_repo: course-materials-f2026, source_path: lectures/04_classification, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: readings/04_classification, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: labs/04_classification, dest_repo: materials}
+
+  session-05:
+    when: 2026-10-06T08:00
+    deploy:
+      - {source_repo: course-materials-f2026, source_path: lectures/05_regularisation-and-model-selection, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: readings/05_regularisation-and-model-selection, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: labs/05_regularisation-and-model-selection, dest_repo: materials}
+
+  assignment-2-handout:
+    when: 2026-10-06T14:00
+    assignment: assignment-2-f2026
+
+  session-06:
+    when: 2026-10-13T08:00
+    deploy:
+      - {source_repo: course-materials-f2026, source_path: lectures/06_trees-and-ensembles, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: readings/06_trees-and-ensembles, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: labs/06_trees-and-ensembles, dest_repo: materials}
+
+  # Grading runs AFTER the deadline (due date + grace_days, see `assignments` below), and
+  # only ever faculty-side: student repos get no tests, no workflow and no score.
+  assignment-1-grade:
+    when: 2026-10-16T02:00
+    grade: {template: assignment-1-f2026, deadline: 2026-10-15T23:59}
+
+  session-07:
+    when: 2026-10-20T08:00
+    deploy:
+      - {source_repo: course-materials-f2026, source_path: lectures/07_unsupervised-learning, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: readings/07_unsupervised-learning, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: labs/07_unsupervised-learning, dest_repo: materials}
+
+  # A GROUP assignment: one repo per team, from classroom-config/teams.csv.
+  project-handout:
+    when: 2026-10-20T14:00
+    assignment: assignment-3-project-f2026
+
+  session-08:
+    when: 2026-10-27T08:00
+    deploy:
+      - {source_repo: course-materials-f2026, source_path: lectures/08_neural-networks, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: readings/08_neural-networks, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: labs/08_neural-networks, dest_repo: materials}
+
+  session-09:
+    when: 2026-11-03T08:00
+    deploy:
+      - {source_repo: course-materials-f2026, source_path: lectures/09_feature-engineering-and-pipelines, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: readings/09_feature-engineering-and-pipelines, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: labs/09_feature-engineering-and-pipelines, dest_repo: materials}
+
+  assignment-2-grade:
+    when: 2026-11-06T02:00
+    grade: {template: assignment-2-f2026, deadline: 2026-11-05T23:59}
+
+  session-10:
+    when: 2026-11-10T08:00
+    deploy:
+      - {source_repo: course-materials-f2026, source_path: lectures/10_evaluation-and-ethics, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: readings/10_evaluation-and-ethics, dest_repo: materials}
+      - {source_repo: course-materials-f2026, source_path: labs/10_evaluation-and-ethics, dest_repo: materials}
+
+  project-grade:
+    when: 2026-12-01T02:00
+    grade: {template: assignment-3-project-f2026, deadline: 2026-11-30T23:59, group: true}
+
+# ------------------------------------------------------------------ website + grading dates
+# These drive the schedule table on the cohort site and the grading pins. They are NOT the
+# release plan above; a bare date here means start-of-day for a release and end-of-day
+# (23:59:59) for a due date.
+
+semester_start: 2026-09-08      # first Tuesday of teaching
+semester_end: 2026-12-18
+
+assignments:                    # keyed by assignment SLUG = repo name minus the -f2026 tag
+  assignment-1:
+    due: 2026-10-13T23:59
+    grace_days: 2               # grading-only, never shown to students: the autograder pins
+                                # each submission to due + grace_days (here 15 Oct 23:59,
+                                # which is the `deadline` on assignment-1-grade above).
+  assignment-2:
+    due: 2026-11-03T23:59
+    grace_days: 2
+  assignment-3-project:
+    due: 2026-11-27T23:59
+    grace_days: 3
+
+exams:
+  # A bare `date` is a whole-day entry (the site shows a placeholder time); give a full
+  # datetime once the real start time is known, as both of these do.
+  - {name: Midterm Exam, date: 2026-10-27T10:00}
+  - {name: Final Exam, date: 2026-12-15T14:00}
