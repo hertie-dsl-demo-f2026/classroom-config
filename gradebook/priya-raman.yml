@@ -1,0 +1,8 @@
+student: priya-raman
+assignments:
+  assignment-1:
+    final: '87'
+    comments: Strong. R-squared returns 0.0 rather than a negative value in one edge
+      case.
+  assignment-3-project:
+    team: team-gamma
