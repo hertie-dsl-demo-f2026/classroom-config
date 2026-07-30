@@ -1,0 +1,47 @@
+{
+  "score": 8,
+  "max": 10,
+  "tests": [
+    {
+      "name": "test_solve_two_by_two",
+      "passed": true
+    },
+    {
+      "name": "test_solve_requires_pivoting",
+      "passed": true
+    },
+    {
+      "name": "test_solve_rejects_singular",
+      "passed": true
+    },
+    {
+      "name": "test_recovers_exact_line",
+      "passed": true
+    },
+    {
+      "name": "test_recovers_exact_plane_with_negative_slope",
+      "passed": true
+    },
+    {
+      "name": "test_residuals_sum_to_zero",
+      "passed": true
+    },
+    {
+      "name": "test_residuals_orthogonal_to_each_feature",
+      "passed": true
+    },
+    {
+      "name": "test_no_perturbation_lowers_the_rss",
+      "passed": true
+    },
+    {
+      "name": "test_r_squared_boundaries",
+      "passed": false
+    },
+    {
+      "name": "test_r_squared_goes_negative",
+      "passed": false
+    }
+  ],
+  "commit": "b4f186082d5d7c35a6954265c0703801a35b9c4e"
+}
