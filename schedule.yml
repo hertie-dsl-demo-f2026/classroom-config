@@ -144,8 +144,8 @@ semester_end: 2026-12-18
 
 assignments:                    # keyed by assignment SLUG = repo name minus the -f2026 tag
   assignment-1:
-    due: 2026-10-13T23:59
-    grace_days: 2               # grading-only, never shown to students: the autograder pins
+    due: 2026-07-30T11:41:00+00:00
+    grace_days: 0               # grading-only, never shown to students: the autograder pins
                                 # each submission to due + grace_days (here 15 Oct 23:59,
                                 # which is the `deadline` on assignment-1-grade above).
   assignment-2:
