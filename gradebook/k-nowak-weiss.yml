@@ -1,0 +1,16 @@
+student: k-nowak-weiss
+assignments:
+  assignment-1:
+    final: '93'
+    comments: Excellent. The one failing test is the singular-matrix guard; everything
+      else is exemplary, and the write-up is the best in the cohort.
+  assignment-3-project:
+    team: team-beta
+    team_grade: '76'
+    adjustment: '+2'
+    team_comments: Good work, weakened by a late change of question. The report is
+      clear and the reproducibility is exemplary, but the results section compares
+      against no baseline.
+    final: '78'
+    comments: Wrote the leakage audit that caught a post-outcome column two days before
+      submission.
