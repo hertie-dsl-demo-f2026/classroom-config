@@ -76,11 +76,18 @@ provision student repos). The hourly **Scheduled release** cron fires each actio
 time has arrived (honoured to the hour): actions fire at the `calendar_event`, except a
 deploy carrying its own `deploy_datetime:` - so materials can ship an hour (or a week)
 before the class they belong to. An entry with **no actions** is a display-only calendar
-event (a clinic, a guest lecture): nothing deploys, the site shows the row. Also holds
+event (a clinic, a guest lecture): nothing deploys, the site shows the row. Uncertain
+dates: `tbc: true` next to a date marks it provisional ("(TBC)" on the site, still fires);
+`calendar_event: tbc` / an exam's `date: tbc` is a fully undated TBC row (nothing fires).
+Also holds
 `semester_start`/`semester_end`, `assignments` (due dates for the website, plus each
 assignment's `grading_deadline` - the moment its snapshot freezes and it is autograded,
 once; grading needs no release entry), and `exams`. Seeded mostly-commented - uncomment and
-fill what you want; anything left out is synthesised or simply not scheduled.
+fill what you want; anything left out is synthesised or simply not scheduled. Minimal is
+the recommended shape: on a deploy only `source_repo` + `source_path` are required
+(`dest_repo` defaults to `materials`, `dest_path` mirrors `source_path`, ship time
+defaults to the `calendar_event`; paths are relative to their repo); on an assignment
+only `due` is.
 **Changing a date later** is just committing the edit to this file on main (GitHub web
 UI recommended, or clone/commit/push) - the hourly cron reads whatever is on main at
 each tick, so it takes effect within the hour. Already-fired one-shot actions don't
