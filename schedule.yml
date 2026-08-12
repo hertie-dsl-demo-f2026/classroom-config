@@ -136,6 +136,13 @@ materials_releases:
   project-clinic:
     calendar_event: 2026-11-17T10:00
     title: Project clinic
+    tbc: true                   # provisional date - fires as normal, site shows "(TBC)"
+
+  # `calendar_event: tbc` -> an undated TBC row on the site; nothing fires until a real
+  # date replaces it.
+  guest-lecture:
+    calendar_event: tbc
+    title: Guest lecture (industry speaker)
 
   lecture-09:
     calendar_event: 2026-11-03T10:00
@@ -187,5 +194,5 @@ assignments:                    # each assignment's WHOLE lifecycle - handout, d
 exams:
   # A bare `date` is a whole-day entry (the site shows a placeholder time); give a full
   # datetime once the real start time is known, as both of these do.
-  - {name: Midterm Exam, date: 2026-10-27T10:00}
+  - {name: Midterm Exam, date: 2026-10-27T10:00, tbc: true}   # provisional
   - {name: Final Exam, date: 2026-12-15T14:00}
