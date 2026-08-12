@@ -11,7 +11,7 @@
 # below. Sources are always read from the COURSE org (DSL-Demo-Course-E1234), destinations
 # always written to this COHORT org - so entries name repos, never orgs.
 #
-# Full schema: docs/faculty-and-instructors/required-input-schema.md#the-schedule
+# Full schema: docs/DEPLOYMENT-CHECKLIST.md#the-schedule
 
 timezone: Europe/Berlin        # optional (this is the default). Naive times below are read
                                # in this zone; GitHub's cron itself runs in UTC, so a `when`
