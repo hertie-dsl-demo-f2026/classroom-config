@@ -22,12 +22,11 @@ materials_releases:
   # One entry per session: lecture, readings and lab go out together, Tuesdays 08:00,
   # before the 10:00 class. The label is a free identifier - only `when` and the actions
   # matter - but keeping it `session-NN` makes the Actions log readable.
-  session-01:
+  lecture-01:
     calendar_event: 2026-09-08T10:00
     deploy:
       - {source_repo: course-materials-f2026, source_path: lectures/01_introduction, dest_repo: materials, deploy_datetime: 2026-09-08T08:00}
       - {source_repo: course-materials-f2026, source_path: readings/01_introduction, dest_repo: materials}
-      - {source_repo: course-materials-f2026, source_path: labs/01_introduction, dest_repo: materials}
       # Release the package skeleton early so every later partial release still imports.
       - {source_repo: lecture-code-f2026, source_path: pyproject.toml, dest_repo: materials, dest_path: lecture-code/pyproject.toml}
       - {source_repo: lecture-code-f2026, source_path: README.md, dest_repo: materials, dest_path: lecture-code/README.md}
@@ -37,101 +36,127 @@ materials_releases:
   # A one-off deploy that is not a numbered session: the shared teaching dataset, landing
   # under a different path from the one it is stored at. `datasets/` has no ordinal-prefixed
   # subdirectories, so it is NOT a releasable section - this entry is the only way it ships.
+  lab-01:
+    calendar_event: 2026-09-10T14:00
+    deploy:
+      - {source_repo: course-materials-f2026, source_path: labs/01_introduction, dest_repo: materials}
+
   housing-dataset:
     calendar_event: 2026-09-08T08:00
     deploy:
       - {source_repo: course-materials-f2026, source_path: datasets/housing-mini.csv, dest_repo: materials, dest_path: data/housing-mini.csv}
 
-  session-02:
+  lecture-02:
     calendar_event: 2026-09-15T10:00
     deploy:
       - {source_repo: course-materials-f2026, source_path: lectures/02_linear-regression, dest_repo: materials, deploy_datetime: 2026-09-15T08:00}
       - {source_repo: course-materials-f2026, source_path: readings/02_linear-regression, dest_repo: materials}
-      - {source_repo: course-materials-f2026, source_path: labs/02_linear-regression, dest_repo: materials}
       # Phased disclosure: reveal a module when you teach what is in it.
       - {source_repo: lecture-code-f2026, source_path: mlfdemo/linreg.py, dest_repo: materials, dest_path: lecture-code/mlfdemo/linreg.py}
 
-  session-03:
+  lab-02:
+    calendar_event: 2026-09-17T14:00
+    deploy:
+      - {source_repo: course-materials-f2026, source_path: labs/02_linear-regression, dest_repo: materials}
+
+  lecture-03:
     calendar_event: 2026-09-22T10:00
     deploy:
       - {source_repo: course-materials-f2026, source_path: lectures/03_gradient-descent, dest_repo: materials, deploy_datetime: 2026-09-22T08:00}
       - {source_repo: course-materials-f2026, source_path: readings/03_gradient-descent, dest_repo: materials}
-      - {source_repo: course-materials-f2026, source_path: labs/03_gradient-descent, dest_repo: materials}
       - {source_repo: lecture-code-f2026, source_path: mlfdemo/plotting.py, dest_repo: materials, dest_path: lecture-code/mlfdemo/plotting.py}
 
-  # Assignment handouts: one private repo per enrolled student, generated from the template.
-  # Auditors are skipped automatically.
-  assignment-1-handout:
-    calendar_event: 2026-09-22T14:00
-    assignment: assignment-1-f2026
+  lab-03:
+    calendar_event: 2026-09-24T14:00
+    deploy:
+      - {source_repo: course-materials-f2026, source_path: labs/03_gradient-descent, dest_repo: materials}
 
-  session-04:
+  lecture-04:
     calendar_event: 2026-09-29T10:00
     deploy:
       - {source_repo: course-materials-f2026, source_path: lectures/04_classification, dest_repo: materials, deploy_datetime: 2026-09-29T08:00}
       - {source_repo: course-materials-f2026, source_path: readings/04_classification, dest_repo: materials}
+
+  lab-04:
+    calendar_event: 2026-10-01T14:00
+    deploy:
       - {source_repo: course-materials-f2026, source_path: labs/04_classification, dest_repo: materials}
 
-  session-05:
+  lecture-05:
     calendar_event: 2026-10-06T10:00
     deploy:
       - {source_repo: course-materials-f2026, source_path: lectures/05_regularisation-and-model-selection, dest_repo: materials, deploy_datetime: 2026-10-06T08:00}
       - {source_repo: course-materials-f2026, source_path: readings/05_regularisation-and-model-selection, dest_repo: materials}
+
+  lab-05:
+    calendar_event: 2026-10-08T14:00
+    deploy:
       - {source_repo: course-materials-f2026, source_path: labs/05_regularisation-and-model-selection, dest_repo: materials}
 
-  assignment-2-handout:
-    calendar_event: 2026-10-06T14:00
-    assignment: assignment-2-f2026
-
-  session-06:
+  lecture-06:
     calendar_event: 2026-10-13T10:00
     deploy:
       - {source_repo: course-materials-f2026, source_path: lectures/06_trees-and-ensembles, dest_repo: materials, deploy_datetime: 2026-10-13T08:00}
       - {source_repo: course-materials-f2026, source_path: readings/06_trees-and-ensembles, dest_repo: materials}
-      - {source_repo: course-materials-f2026, source_path: labs/06_trees-and-ensembles, dest_repo: materials}
 
   # NOTE: there are no `grade:` entries in this plan, and you do not need any. The hourly
   # cron autogrades each assignment ONCE, by itself, at its `grading_deadline` under
   # `assignments:` below. Grading is only ever faculty-side: student repos get no tests, no
   # workflow and no score.
 
-  session-07:
+  lab-06:
+    calendar_event: 2026-10-15T14:00
+    deploy:
+      - {source_repo: course-materials-f2026, source_path: labs/06_trees-and-ensembles, dest_repo: materials}
+
+  lecture-07:
     calendar_event: 2026-10-20T10:00
     deploy:
       - {source_repo: course-materials-f2026, source_path: lectures/07_unsupervised-learning, dest_repo: materials, deploy_datetime: 2026-10-20T08:00}
       - {source_repo: course-materials-f2026, source_path: readings/07_unsupervised-learning, dest_repo: materials}
+
+  lab-07:
+    calendar_event: 2026-10-22T14:00
+    deploy:
       - {source_repo: course-materials-f2026, source_path: labs/07_unsupervised-learning, dest_repo: materials}
 
-  # A GROUP assignment: one repo per team, from classroom-config/teams.csv.
-  project-handout:
-    calendar_event: 2026-10-20T14:00
-    assignment: assignment-3-project-f2026
-
-  session-08:
+  lecture-08:
     calendar_event: 2026-10-27T10:00
     deploy:
       - {source_repo: course-materials-f2026, source_path: lectures/08_neural-networks, dest_repo: materials, deploy_datetime: 2026-10-27T08:00}
       - {source_repo: course-materials-f2026, source_path: readings/08_neural-networks, dest_repo: materials}
-      - {source_repo: course-materials-f2026, source_path: labs/08_neural-networks, dest_repo: materials}
 
   # A DISPLAY-ONLY calendar event: no actions, so nothing deploys - the site's schedule
   # simply shows the row. (The project brief announces this clinic.)
+  lab-08:
+    calendar_event: 2026-10-29T14:00
+    deploy:
+      - {source_repo: course-materials-f2026, source_path: labs/08_neural-networks, dest_repo: materials}
+
   project-clinic:
     calendar_event: 2026-11-17T10:00
     title: Project clinic
 
-  session-09:
+  lecture-09:
     calendar_event: 2026-11-03T10:00
     deploy:
       - {source_repo: course-materials-f2026, source_path: lectures/09_feature-engineering-and-pipelines, dest_repo: materials, deploy_datetime: 2026-11-03T08:00}
       - {source_repo: course-materials-f2026, source_path: readings/09_feature-engineering-and-pipelines, dest_repo: materials}
+
+  lab-09:
+    calendar_event: 2026-11-05T14:00
+    deploy:
       - {source_repo: course-materials-f2026, source_path: labs/09_feature-engineering-and-pipelines, dest_repo: materials}
 
-  session-10:
+  lecture-10:
     calendar_event: 2026-11-10T10:00
     deploy:
       - {source_repo: course-materials-f2026, source_path: lectures/10_evaluation-and-ethics, dest_repo: materials, deploy_datetime: 2026-11-10T08:00}
       - {source_repo: course-materials-f2026, source_path: readings/10_evaluation-and-ethics, dest_repo: materials}
+
+  lab-10:
+    calendar_event: 2026-11-12T14:00
+    deploy:
       - {source_repo: course-materials-f2026, source_path: labs/10_evaluation-and-ethics, dest_repo: materials}
 
 # ------------------------------------------------------------------ website + grading dates
@@ -142,17 +167,21 @@ materials_releases:
 semester_start: 2026-09-08      # first Tuesday of teaching
 semester_end: 2026-12-18
 
-assignments:                    # keyed by assignment SLUG = repo name minus the -f2026 tag
+assignments:                    # each assignment's WHOLE lifecycle - handout, due, grading
   assignment-1:
+    handout: 2026-09-22T14:00   # one private repo per enrolled student, automatic
     due: 2026-10-13T23:59
     grading_deadline: 2026-10-15T23:59   # grading-only, never shown to students: the moment
                                          # the submission snapshot freezes AND the hourly
                                          # cron autogrades this assignment, once.
   assignment-2:
+    handout: 2026-10-06T14:00
     due: 2026-11-03T23:59
     grading_deadline: 2026-11-05T23:59
-  assignment-3-project:
+  assignment-3-project:       # GROUP: per-team repos - its template's grading.yml says so
+    handout: 2026-10-20T14:00
     due: 2026-11-27T23:59
+    max_team_size: 3            # the welcome "Join team" flow refuses a 4th member
     grading_deadline: 2026-11-30T23:59   # the group project: graded per team (teams.csv)
 
 exams:
