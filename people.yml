@@ -14,15 +14,20 @@
 #
 # A card renders only for an entry that has a `name` AND is active today, so the
 # start/end window below governs the card as well as the access.
+# DEMO DATA: the `demo-*-placeholder` handles are deliberately NON-EXISTENT GitHub
+# accounts - the cards below carry real names/photos/links, but no invitation is ever
+# sent to anyone. A card is built from this file, not from GitHub, so display works
+# regardless. Swap in real handles to actually grant access (the sync logs a warning
+# and continues for a handle that does not exist).
 people:
   instructors:
-    - github_handle: "LynnKaack"
+    - github_handle: "demo-lkaack-placeholder"
       name: "Prof. Lynn Kaack, PhD"
       title: "Assistant Professor of Computer Science and Public Policy"
       photo: "https://github.com/LynnKaack.png"
       url: "https://www.hertie-school.org/de/research/faculty-and-researchers/profile/person/kaack"
   teaching_assistants:
-    - github_handle: "chiara-fb"
+    - github_handle: "demo-cfusarbassini-placeholder"
       name: "Chiara Fusar Bassini"
       title: "PhD candidate, Data Science Lab"
       photo: "https://github.com/chiara-fb.png"
