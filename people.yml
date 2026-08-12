@@ -1,11 +1,14 @@
 # This cohort's own instructors/TAs - the SSOT for their GitHub push access (this cohort's
 # own instructors team, plus a course-org instructors-f2026 team scoped to this year's
 # content repos and the central .github repo so they can use the dispatch buttons).
-# Website display cards come from the COURSE org's people: block instead
-# (../course-org/dsl-course.yml) - see that file's comment.
+#
+# This file ALSO supplies the cohort website's staff cards: name + title + photo + url, per
+# entry. (The COURSE org's dsl-course.yml people: block supplies cards for the optional
+# PUBLIC course site instead, and declares course_admins - see that file.)
 #
 # `github_handle` is the only required field. `start`/`end` (optional ISO dates) auto-rotate
-# access, so a TA's access lapses on the end date with no manual removal.
+# access, so a TA's access lapses on the end date with no manual removal. A card is rendered
+# only for an entry that has a `name` AND is active today.
 #
 # DEMO DATA: `demo-*-placeholder` handles are deliberately non-existent accounts. Replace
 # them with real handles before using this as a template - a handle that does not exist is
@@ -13,11 +16,26 @@
 people:
   instructors:
     - github_handle: "demo-faculty-placeholder"   # Prof. Ada Lovelace - replace
+    # A fully-populated card, with no dates: access and card are indefinite.
     - github_handle: "henrycgbaker"
+      name: "Henry Baker"
+      title: "Instructor"
+      photo: "https://www.hertie-school.org/fileadmin/_processed_/f/8/csm_Henry_final_deda644991.jpg"
+      url: "https://www.hertie-school.org/en/who-we-are/profile/person/baker"
   teaching_assistants:
     - github_handle: "demo-ta-one-placeholder"    # Grace Hopper (demo persona)
       start: "2026-09-01"
       end: "2027-01-31"
     - github_handle: "demo-ta-two-placeholder"    # Alan Turing (demo persona)
       start: "2026-09-01"
+      end: "2027-01-31"
+    # The same person in a second role: one GitHub grant (team membership is a set), but a
+    # separate card under Teaching assistants. Dated, so this one showcases time-boxing -
+    # the card appears from `start` and both card and access lapse after `end`.
+    - github_handle: "henrycgbaker"
+      name: "Henry Baker"
+      title: "Teaching Assistant"
+      photo: "https://www.hertie-school.org/fileadmin/_processed_/f/8/csm_Henry_final_deda644991.jpg"
+      url: "https://www.hertie-school.org/en/who-we-are/profile/person/baker"
+      start: "2026-08-01"
       end: "2027-01-31"
