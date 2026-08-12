@@ -10,6 +10,10 @@
 # access, so a TA's access lapses on the end date with no manual removal. A card is rendered
 # only for an entry that has a `name` AND is active today.
 #
+# `photo` takes EITHER an absolute URL on a host that allows hotlinking, OR a site-relative
+# path to an image committed into this cohort's site repo under `_images/pp/` (served via
+# `include: ['_images']`, and never rewritten by a sync). One of each is shown below.
+#
 # DEMO DATA: `demo-*-placeholder` handles are deliberately non-existent accounts. Replace
 # them with real handles before using this as a template - a handle that does not exist is
 # skipped with a warning, so the sync still succeeds.
@@ -20,7 +24,7 @@ people:
     - github_handle: "henrycgbaker"
       name: "Henry Baker"
       title: "Instructor"
-      photo: "https://www.hertie-school.org/fileadmin/_processed_/f/8/csm_Henry_final_deda644991.jpg"
+      photo: "https://github.com/henrycgbaker.png"   # remote URL
       url: "https://www.hertie-school.org/en/who-we-are/profile/person/baker"
   teaching_assistants:
     - github_handle: "demo-ta-one-placeholder"    # Grace Hopper (demo persona)
@@ -35,7 +39,7 @@ people:
     - github_handle: "henrycgbaker"
       name: "Henry Baker"
       title: "Teaching Assistant"
-      photo: "https://www.hertie-school.org/fileadmin/_processed_/f/8/csm_Henry_final_deda644991.jpg"
+      photo: "/_images/pp/henrycgbaker.jpg"   # local file in the site repo
       url: "https://www.hertie-school.org/en/who-we-are/profile/person/baker"
       start: "2026-08-01"
       end: "2027-01-31"
