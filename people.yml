@@ -1,45 +1,38 @@
-# This cohort's own instructors/TAs - the SSOT for their GitHub push access (this cohort's
-# own instructors team, plus a course-org instructors-f2026 team scoped to this year's
-# content repos and the central .github repo so they can use the dispatch buttons).
+# This cohort's own instructors/TAs - the SSOT for their GitHub push access (this
+# cohort's own instructors team + a course-org instructors-<tag> team scoped to this
+# year's content repos, plus the central .github repo for the central dispatch
+# buttons).
 #
-# This file ALSO supplies the cohort website's staff cards: name + title + photo + url, per
-# entry. (The COURSE org's dsl-course.yml people: block supplies cards for the optional
-# PUBLIC course site instead, and declares course_admins - see that file.)
+# This file ALSO supplies the COHORT website's staff cards (name/title/photo/url) -
+# see this dataset's README, "What this stands up". The course org's dsl-course.yml
+# people: block supplies cards for the optional PUBLIC course site instead.
 #
-# `github_handle` is the only required field. `start`/`end` (optional ISO dates) auto-rotate
-# access, so a TA's access lapses on the end date with no manual removal. A card is rendered
-# only for an entry that has a `name` AND is active today.
+# `photo` takes EITHER an absolute URL on a host that ALLOWS HOTLINKING (GitHub
+# avatars always do), OR a site-relative path to an image committed into this
+# cohort's site repo under `_images/pp/`. Institutional profile sites often return
+# 403 to off-site requests, which renders as a broken image - host those locally.
 #
-# `photo` takes EITHER an absolute URL on a host that allows hotlinking, OR a site-relative
-# path to an image committed into this cohort's site repo under `_images/pp/` (served via
-# `include: ['_images']`, and never rewritten by a sync). One of each is shown below.
-#
-# DEMO DATA: `demo-*-placeholder` handles are deliberately non-existent accounts. Replace
-# them with real handles before using this as a template - a handle that does not exist is
-# skipped with a warning, so the sync still succeeds.
+# A card renders only for an entry that has a `name` AND is active today, so the
+# start/end window below governs the card as well as the access.
 people:
   instructors:
-    - github_handle: "demo-faculty-placeholder"   # Prof. Ada Lovelace - replace
-    # A fully-populated card, with no dates: access and card are indefinite.
-    - github_handle: "henrycgbaker"
-      name: "Henry Baker"
-      title: "Instructor"
-      photo: "https://github.com/henrycgbaker.png"   # remote URL
-      url: "https://www.hertie-school.org/en/who-we-are/profile/person/baker"
+    - github_handle: "LynnKaack"
+      name: "Prof. Lynn Kaack, PhD"
+      title: "Assistant Professor of Computer Science and Public Policy"
+      photo: "https://github.com/LynnKaack.png"
+      url: "https://www.hertie-school.org/de/research/faculty-and-researchers/profile/person/kaack"
   teaching_assistants:
-    - github_handle: "demo-ta-one-placeholder"    # Grace Hopper (demo persona)
-      start: "2026-09-01"
+    - github_handle: "chiara-fb"
+      name: "Chiara Fusar Bassini"
+      title: "PhD candidate, Data Science Lab"
+      photo: "https://github.com/chiara-fb.png"
+      url: "https://www.hertie-school.org/en/who-we-are/profile/person/fusar-bassini"
+      start: "2026-08-01"
       end: "2027-01-31"
-    - github_handle: "demo-ta-two-placeholder"    # Alan Turing (demo persona)
-      start: "2026-09-01"
-      end: "2027-01-31"
-    # The same person in a second role: one GitHub grant (team membership is a set), but a
-    # separate card under Teaching assistants. Dated, so this one showcases time-boxing -
-    # the card appears from `start` and both card and access lapse after `end`.
     - github_handle: "henrycgbaker"
       name: "Henry Baker"
-      title: "Teaching Assistant"
-      photo: "/_images/pp/henrycgbaker.jpg"   # local file in the site repo
+      title: "Research Engineer & Data Scientist"
+      photo: "/_images/pp/henrycgbaker.jpg"   # the other form: local file in the site repo
       url: "https://www.hertie-school.org/en/who-we-are/profile/person/baker"
       start: "2026-08-01"
       end: "2027-01-31"
