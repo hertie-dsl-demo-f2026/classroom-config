@@ -35,8 +35,8 @@ semester_start: 2026-09-08      # first Tuesday of teaching
 semester_end: 2026-12-18
 
 releases:
-  # Deploys are MINIMAL where the defaults fit: only source_repo + source_path are required;
-  # dest_repo defaults to `materials`, dest_path mirrors source_path, and each copy ships at
+  # Deploys are MINIMAL where the defaults fit: only course_source_repo + course_source_path are
+  # required; cohort_dest_repo defaults to `materials`, cohort_dest_path mirrors the source, and each copy ships at
   # the entry's event_datetime. The lecture lines add ONE option - deploy_datetime - to ship
   # two hours before class. (Paths are relative to their repo.)
   #
@@ -50,10 +50,10 @@ releases:
   housing-dataset:
     event_datetime: 2026-09-08T08:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: datasets/housing-mini.csv
-        dest_repo: materials
-        dest_path: data/housing-mini.csv
+      - course_source_repo: course-materials-f2026
+        course_source_path: datasets/housing-mini.csv
+        cohort_dest_repo: materials
+        cohort_dest_path: data/housing-mini.csv
 
   # ---------------------------------------------------------------- teaching sessions
   # One entry per session: lecture + readings Tuesdays 10:00 (files ship 08:00), lab
@@ -61,118 +61,118 @@ releases:
   lecture-01:
     event_datetime: 2026-09-08T10:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: lectures/01_introduction
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: lectures/01_introduction
+        cohort_dest_repo: materials
         deploy_datetime: 2026-09-08T08:00
-      - source_repo: course-materials-f2026
-        source_path: readings/01_introduction
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/01_introduction
+        cohort_dest_repo: materials
       # Release the package skeleton early so every later partial release still imports.
-      - source_repo: lecture-code-f2026
-        source_path: pyproject.toml
-        dest_repo: materials
-        dest_path: lecture-code/pyproject.toml
-      - source_repo: lecture-code-f2026
-        source_path: README.md
-        dest_repo: materials
-        dest_path: lecture-code/README.md
-      - source_repo: lecture-code-f2026
-        source_path: mlfdemo/__init__.py
-        dest_repo: materials
-        dest_path: lecture-code/mlfdemo/__init__.py
-      - source_repo: lecture-code-f2026
-        source_path: mlfdemo/datasets.py
-        dest_repo: materials
-        dest_path: lecture-code/mlfdemo/datasets.py
+      - course_source_repo: lecture-code-f2026
+        course_source_path: pyproject.toml
+        cohort_dest_repo: materials
+        cohort_dest_path: lecture-code/pyproject.toml
+      - course_source_repo: lecture-code-f2026
+        course_source_path: README.md
+        cohort_dest_repo: materials
+        cohort_dest_path: lecture-code/README.md
+      - course_source_repo: lecture-code-f2026
+        course_source_path: mlfdemo/__init__.py
+        cohort_dest_repo: materials
+        cohort_dest_path: lecture-code/mlfdemo/__init__.py
+      - course_source_repo: lecture-code-f2026
+        course_source_path: mlfdemo/datasets.py
+        cohort_dest_repo: materials
+        cohort_dest_path: lecture-code/mlfdemo/datasets.py
 
   lab-01:
     event_datetime: 2026-09-10T14:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: labs/01_introduction
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: labs/01_introduction
+        cohort_dest_repo: materials
 
   lecture-02:
     event_datetime: 2026-09-15T10:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: lectures/02_linear-regression
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: lectures/02_linear-regression
+        cohort_dest_repo: materials
         deploy_datetime: 2026-09-15T08:00
-      - source_repo: course-materials-f2026
-        source_path: readings/02_linear-regression
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/02_linear-regression
+        cohort_dest_repo: materials
       # Phased disclosure: reveal a module when you teach what is in it.
-      - source_repo: lecture-code-f2026
-        source_path: mlfdemo/linreg.py
-        dest_repo: materials
-        dest_path: lecture-code/mlfdemo/linreg.py
+      - course_source_repo: lecture-code-f2026
+        course_source_path: mlfdemo/linreg.py
+        cohort_dest_repo: materials
+        cohort_dest_path: lecture-code/mlfdemo/linreg.py
 
   lab-02:
     event_datetime: 2026-09-17T14:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: labs/02_linear-regression
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: labs/02_linear-regression
+        cohort_dest_repo: materials
 
   lecture-03:
     event_datetime: 2026-09-22T10:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: lectures/03_gradient-descent
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: lectures/03_gradient-descent
+        cohort_dest_repo: materials
         deploy_datetime: 2026-09-22T08:00
-      - source_repo: course-materials-f2026
-        source_path: readings/03_gradient-descent
-        dest_repo: materials
-      - source_repo: lecture-code-f2026
-        source_path: mlfdemo/plotting.py
-        dest_repo: materials
-        dest_path: lecture-code/mlfdemo/plotting.py
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/03_gradient-descent
+        cohort_dest_repo: materials
+      - course_source_repo: lecture-code-f2026
+        course_source_path: mlfdemo/plotting.py
+        cohort_dest_repo: materials
+        cohort_dest_path: lecture-code/mlfdemo/plotting.py
 
   lab-03:
     event_datetime: 2026-09-24T14:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: labs/03_gradient-descent
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: labs/03_gradient-descent
+        cohort_dest_repo: materials
 
   lecture-04:
     event_datetime: 2026-09-29T10:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: lectures/04_classification
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: lectures/04_classification
+        cohort_dest_repo: materials
         deploy_datetime: 2026-09-29T08:00
-      - source_repo: course-materials-f2026
-        source_path: readings/04_classification
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/04_classification
+        cohort_dest_repo: materials
 
   lab-04:
     event_datetime: 2026-10-01T14:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: labs/04_classification
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: labs/04_classification
+        cohort_dest_repo: materials
 
   lecture-05:
     event_datetime: 2026-10-06T10:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: lectures/05_regularisation-and-model-selection
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: lectures/05_regularisation-and-model-selection
+        cohort_dest_repo: materials
         deploy_datetime: 2026-10-06T08:00
-      - source_repo: course-materials-f2026
-        source_path: readings/05_regularisation-and-model-selection
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/05_regularisation-and-model-selection
+        cohort_dest_repo: materials
 
   lab-05:
     event_datetime: 2026-10-08T14:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: labs/05_regularisation-and-model-selection
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: labs/05_regularisation-and-model-selection
+        cohort_dest_repo: materials
 
   # NOTE: there are no `grade:` entries in this plan, and you do not need any. The hourly
   # cron autogrades each assignment ONCE, by itself, at its `grading_datetime` under
@@ -182,92 +182,92 @@ releases:
   lecture-06:
     event_datetime: 2026-10-13T10:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: lectures/06_trees-and-ensembles
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: lectures/06_trees-and-ensembles
+        cohort_dest_repo: materials
         deploy_datetime: 2026-10-13T08:00
-      - source_repo: course-materials-f2026
-        source_path: readings/06_trees-and-ensembles
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/06_trees-and-ensembles
+        cohort_dest_repo: materials
 
   lab-06:
     event_datetime: 2026-10-15T14:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: labs/06_trees-and-ensembles
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: labs/06_trees-and-ensembles
+        cohort_dest_repo: materials
 
   lecture-07:
     event_datetime: 2026-10-20T10:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: lectures/07_unsupervised-learning
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: lectures/07_unsupervised-learning
+        cohort_dest_repo: materials
         deploy_datetime: 2026-10-20T08:00
-      - source_repo: course-materials-f2026
-        source_path: readings/07_unsupervised-learning
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/07_unsupervised-learning
+        cohort_dest_repo: materials
 
   lab-07:
     event_datetime: 2026-10-22T14:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: labs/07_unsupervised-learning
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: labs/07_unsupervised-learning
+        cohort_dest_repo: materials
 
   lecture-08:
     event_datetime: 2026-10-27T10:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: lectures/08_neural-networks
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: lectures/08_neural-networks
+        cohort_dest_repo: materials
         deploy_datetime: 2026-10-27T08:00
-      - source_repo: course-materials-f2026
-        source_path: readings/08_neural-networks
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/08_neural-networks
+        cohort_dest_repo: materials
 
   lab-08:
     event_datetime: 2026-10-29T14:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: labs/08_neural-networks
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: labs/08_neural-networks
+        cohort_dest_repo: materials
 
   lecture-09:
     event_datetime: 2026-11-03T10:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: lectures/09_feature-engineering-and-pipelines
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: lectures/09_feature-engineering-and-pipelines
+        cohort_dest_repo: materials
         deploy_datetime: 2026-11-03T08:00
-      - source_repo: course-materials-f2026
-        source_path: readings/09_feature-engineering-and-pipelines
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/09_feature-engineering-and-pipelines
+        cohort_dest_repo: materials
 
   lab-09:
     event_datetime: 2026-11-05T14:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: labs/09_feature-engineering-and-pipelines
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: labs/09_feature-engineering-and-pipelines
+        cohort_dest_repo: materials
 
   lecture-10:
     event_datetime: 2026-11-10T10:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: lectures/10_evaluation-and-ethics
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: lectures/10_evaluation-and-ethics
+        cohort_dest_repo: materials
         deploy_datetime: 2026-11-10T08:00
-      - source_repo: course-materials-f2026
-        source_path: readings/10_evaluation-and-ethics
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/10_evaluation-and-ethics
+        cohort_dest_repo: materials
 
   lab-10:
     event_datetime: 2026-11-12T14:00
     deploy:
-      - source_repo: course-materials-f2026
-        source_path: labs/10_evaluation-and-ethics
-        dest_repo: materials
+      - course_source_repo: course-materials-f2026
+        course_source_path: labs/10_evaluation-and-ethics
+        cohort_dest_repo: materials
 
 # ------------------------------------------------------------------------- assignments
 # Each assignment's WHOLE lifecycle in one block. A bare due_datetime is END of day
@@ -277,16 +277,19 @@ releases:
 # unless `type:` below overrides it).
 assignments:
   assignment-1:
+    course_source_repo: assignment-1-f2026   # required: the course-org repo it hands out from
     handout_datetime: 2026-09-22T14:00   # one private repo per enrolled student, automatic
     due_datetime: 2026-10-13T23:59       # what students see
     grading_datetime: 2026-10-15T23:59   # grading-only, never shown to students: the moment
                                          # the submission snapshot freezes AND the hourly
                                          # cron autogrades this assignment, once.
   assignment-2:
+    course_source_repo: assignment-2-f2026   # required: the course-org repo it hands out from
     handout_datetime: 2026-10-06T14:00
     due_datetime: 2026-11-03T23:59
     grading_datetime: 2026-11-05T23:59
   assignment-3-project:
+    course_source_repo: assignment-3-project-f2026   # required: the course-org repo it hands out from
     handout_datetime: 2026-10-20T14:00
     type: group                 # per-team handout + grading (also set in the
                                 # template's grading.yml)
@@ -320,3 +323,4 @@ events:
   guest-lecture:
     title: Guest lecture (industry speaker)
     event_datetime: tbc
+
