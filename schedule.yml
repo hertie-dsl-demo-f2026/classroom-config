@@ -1,326 +1,263 @@
-# DSL-Demo-f2026 - this cohort's release plan AND its display/grading dates, in one file
-# (classroom-config/schedule.yml). Read this as a template: copy it, change the dates, and
-# delete what you do not use. Every field is optional; a cohort with no schedule.yml simply
-# has nothing to auto-release and gets synthesised dates on its website.
+# This cohort's schedule + auto-release plan. Edit here.
 #
-# Each block encodes a BEHAVIOUR - that is the whole schema:
-#   releases:     entries that DEPLOY materials (course org -> this cohort org)
-#   assignments:  each assignment's handout / due / grading lifecycle
-#   events:       display-only calendar rows - nothing deploys, the site just shows them
+# Times are Europe/Berlin unless you set `timezone:`; the Scheduled release cron runs
+# hourly, so times are honoured to the hour.
 #
-# How it fires: a release's `event_datetime` is when the thing HAPPENS (what the site's
-# schedule shows); the hourly "Scheduled release" cron fires its deploys at that moment,
-# except deploys carrying their own `deploy_datetime` (here: lectures ship 08:00, two hours
-# before the 10:00 class). Independently of the plan, the cron freezes the submission
-# snapshot and autogrades each assignment ONCE at its `grading_datetime` below. Sources are
-# always read from the COURSE org (DSL-Demo-Course-E1234), destinations always written to
-# this COHORT org - so entries name repos, never orgs.
-#
-# Changing a date later? Just commit the edit to this file on main - the GitHub web UI is
-# the recommended way (or edit a local clone, commit, push). The hourly cron reads whatever
-# is on main at each tick, so the change takes effect within the hour. Only already-fired
-# ONE-SHOT actions don't rewind: a release already shipped stays shipped, and a
-# snapshot/autograde that already ran needs its marker deleted to redo.
-#
-# Full schema: docs/DEPLOYMENT-CHECKLIST.md#scheduleyml
+# The DEMO cohort: it deliberately exercises every feature the pipeline has - lecture,
+# lab and readings deploys on staggered clocks, individual and group assignments, exams,
+# a dateless TBC row, and display-only special events.
 
-timezone: Europe/Berlin        # optional (this is the default). Naive times below are read
-                               # in this zone; GitHub's cron itself runs in UTC, so an
-                               # event_datetime is honoured to the hour, not the minute.
-
-# ------------------------------------------------------------------------- term boundaries
-# These two also render as their own rows on the site's schedule ("Semester begins" /
-# "Semester ends"), and set the fallback window for anything the plan does not date.
-semester_start: 2026-09-08      # first Tuesday of teaching
+timezone: Europe/Berlin
+semester_start: 2026-09-08
 semester_end: 2026-12-18
 
 releases:
-  # Deploys are MINIMAL where the defaults fit: only course_source_repo + course_source_path are
-  # required; cohort_dest_repo defaults to `materials`, cohort_dest_path mirrors the source, and each copy ships at
-  # the entry's event_datetime. The lecture lines add ONE option - deploy_datetime - to ship
-  # two hours before class. (Paths are relative to their repo.)
-  #
-  # Lecture vs lab is NOT a field: it comes from the section folder deployed here -
-  # `lectures/...` renders a lecture row on the site, `labs/...` its own lab row. The label
-  # is a free identifier; keeping it `lecture-NN` / `lab-NN` makes the Actions log readable.
 
-  # A one-off deploy that is not a numbered session: the shared teaching dataset, landing
-  # under a different path from the one it is stored at. `datasets/` has no ordinal-prefixed
-  # subdirectories, so it is NOT a releasable section - this entry is the only way it ships.
-  housing-dataset:
-    event_datetime: 2026-09-08T08:00
-    deploy:
-      - course_source_repo: course-materials-f2026
-        course_source_path: datasets/housing-mini.csv
-        cohort_dest_repo: materials
-        cohort_dest_path: data/housing-mini.csv
-
-  # ---------------------------------------------------------------- teaching sessions
-  # One entry per session: lecture + readings Tuesdays 10:00 (files ship 08:00), lab
-  # Thursdays 14:00.
   lecture-01:
     event_datetime: 2026-09-08T10:00
+    title: "Deep learning in public policy"
+    description: >
+      What deep learning is, where it already sits in public-sector decision making, and wha
+      t this course will and will not claim for it.
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: lectures/01_introduction
-        cohort_dest_repo: materials
+        course_source_path: lectures/01_deep-learning-in-public-policy
         deploy_datetime: 2026-09-08T08:00
       - course_source_repo: course-materials-f2026
-        course_source_path: readings/01_introduction
-        cohort_dest_repo: materials
-      # Release the package skeleton early so every later partial release still imports.
-      - course_source_repo: lecture-code-f2026
-        course_source_path: pyproject.toml
-        cohort_dest_repo: materials
-        cohort_dest_path: lecture-code/pyproject.toml
-      - course_source_repo: lecture-code-f2026
-        course_source_path: README.md
-        cohort_dest_repo: materials
-        cohort_dest_path: lecture-code/README.md
-      - course_source_repo: lecture-code-f2026
-        course_source_path: mlfdemo/__init__.py
-        cohort_dest_repo: materials
-        cohort_dest_path: lecture-code/mlfdemo/__init__.py
-      - course_source_repo: lecture-code-f2026
-        course_source_path: mlfdemo/datasets.py
-        cohort_dest_repo: materials
-        cohort_dest_path: lecture-code/mlfdemo/datasets.py
+        course_source_path: readings/01_deep-learning-in-public-policy
+        deploy_datetime: 2026-09-03T09:00
 
   lab-01:
     event_datetime: 2026-09-10T14:00
+    title: "Lab 1"
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: labs/01_introduction
-        cohort_dest_repo: materials
+        course_source_path: labs/01_deep-learning-in-public-policy
 
   lecture-02:
     event_datetime: 2026-09-15T10:00
+    title: "Deep neural networks (1)"
+    description: >
+      Perceptrons, activation functions and the forward pass; why depth buys representationa
+      l power.
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: lectures/02_linear-regression
-        cohort_dest_repo: materials
+        course_source_path: lectures/02_deep-neural-networks-1
         deploy_datetime: 2026-09-15T08:00
       - course_source_repo: course-materials-f2026
-        course_source_path: readings/02_linear-regression
-        cohort_dest_repo: materials
-      # Phased disclosure: reveal a module when you teach what is in it.
-      - course_source_repo: lecture-code-f2026
-        course_source_path: mlfdemo/linreg.py
-        cohort_dest_repo: materials
-        cohort_dest_path: lecture-code/mlfdemo/linreg.py
+        course_source_path: readings/02_deep-neural-networks-1
+        deploy_datetime: 2026-09-10T09:00
 
   lab-02:
     event_datetime: 2026-09-17T14:00
+    title: "Lab 2"
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: labs/02_linear-regression
-        cohort_dest_repo: materials
+        course_source_path: labs/02_deep-neural-networks-1
 
   lecture-03:
     event_datetime: 2026-09-22T10:00
+    title: "Deep neural networks (2)"
+    description: >
+      Backpropagation and gradient descent in practice: initialisation, learning rates, and
+      the failure modes of each.
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: lectures/03_gradient-descent
-        cohort_dest_repo: materials
+        course_source_path: lectures/03_deep-neural-networks-2
         deploy_datetime: 2026-09-22T08:00
       - course_source_repo: course-materials-f2026
-        course_source_path: readings/03_gradient-descent
-        cohort_dest_repo: materials
-      - course_source_repo: lecture-code-f2026
-        course_source_path: mlfdemo/plotting.py
-        cohort_dest_repo: materials
-        cohort_dest_path: lecture-code/mlfdemo/plotting.py
+        course_source_path: readings/03_deep-neural-networks-2
+        deploy_datetime: 2026-09-17T09:00
 
   lab-03:
     event_datetime: 2026-09-24T14:00
+    title: "Lab 3"
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: labs/03_gradient-descent
-        cohort_dest_repo: materials
+        course_source_path: labs/03_deep-neural-networks-2
 
   lecture-04:
     event_datetime: 2026-09-29T10:00
+    title: "Computer vision (1): Convolutional neural networks"
+    description: >
+      Convolution, pooling and parameter sharing, and why they suit images.
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: lectures/04_classification
-        cohort_dest_repo: materials
+        course_source_path: lectures/04_computer-vision-1-cnns
         deploy_datetime: 2026-09-29T08:00
       - course_source_repo: course-materials-f2026
-        course_source_path: readings/04_classification
-        cohort_dest_repo: materials
+        course_source_path: readings/04_computer-vision-1-cnns
+        deploy_datetime: 2026-09-24T09:00
 
   lab-04:
     event_datetime: 2026-10-01T14:00
+    title: "Lab 4"
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: labs/04_classification
-        cohort_dest_repo: materials
+        course_source_path: labs/04_computer-vision-1-cnns
 
   lecture-05:
     event_datetime: 2026-10-06T10:00
+    title: "Computer vision (2): Modern CNNs, implementation and applications"
+    description: >
+      Residual connections and modern architectures, with applications to satellite imagery
+      for policy.
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: lectures/05_regularisation-and-model-selection
-        cohort_dest_repo: materials
+        course_source_path: lectures/05_computer-vision-2-modern-cnns
         deploy_datetime: 2026-10-06T08:00
       - course_source_repo: course-materials-f2026
-        course_source_path: readings/05_regularisation-and-model-selection
-        cohort_dest_repo: materials
+        course_source_path: readings/05_computer-vision-2-modern-cnns
+        deploy_datetime: 2026-10-01T09:00
 
   lab-05:
     event_datetime: 2026-10-08T14:00
+    title: "Lab 5"
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: labs/05_regularisation-and-model-selection
-        cohort_dest_repo: materials
-
-  # NOTE: there are no `grade:` entries in this plan, and you do not need any. The hourly
-  # cron autogrades each assignment ONCE, by itself, at its `grading_datetime` under
-  # `assignments:` below. Grading is only ever faculty-side: student repos get no tests, no
-  # workflow and no score.
+        course_source_path: labs/05_computer-vision-2-modern-cnns
 
   lecture-06:
     event_datetime: 2026-10-13T10:00
+    title: "Sequence methods and time-series analysis"
+    description: >
+      Recurrent architectures and their limits; where classical time-series methods remain t
+      he better tool.
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: lectures/06_trees-and-ensembles
-        cohort_dest_repo: materials
+        course_source_path: lectures/06_sequence-methods-and-time-series
         deploy_datetime: 2026-10-13T08:00
-      - course_source_repo: course-materials-f2026
-        course_source_path: readings/06_trees-and-ensembles
-        cohort_dest_repo: materials
 
   lab-06:
     event_datetime: 2026-10-15T14:00
+    title: "Lab 6"
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: labs/06_trees-and-ensembles
-        cohort_dest_repo: materials
+        course_source_path: labs/06_sequence-methods-and-time-series
 
   lecture-07:
     event_datetime: 2026-10-20T10:00
+    title: "Natural language processing (1)"
+    description: >
+      Text as data: tokenisation, embeddings, and what a language model is actually estimati
+      ng.
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: lectures/07_unsupervised-learning
-        cohort_dest_repo: materials
+        course_source_path: lectures/07_natural-language-processing-1
         deploy_datetime: 2026-10-20T08:00
-      - course_source_repo: course-materials-f2026
-        course_source_path: readings/07_unsupervised-learning
-        cohort_dest_repo: materials
-
-  lab-07:
-    event_datetime: 2026-10-22T14:00
-    deploy:
-      - course_source_repo: course-materials-f2026
-        course_source_path: labs/07_unsupervised-learning
-        cohort_dest_repo: materials
 
   lecture-08:
     event_datetime: 2026-10-27T10:00
+    title: "Natural language processing (2): Encoder-decoder architecture and attention"
+    description: >
+      The attention mechanism and the transformer, read through the papers that introduced t
+      hem.
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: lectures/08_neural-networks
-        cohort_dest_repo: materials
+        course_source_path: lectures/08_nlp-2-encoder-decoder-and-attention
         deploy_datetime: 2026-10-27T08:00
       - course_source_repo: course-materials-f2026
-        course_source_path: readings/08_neural-networks
-        cohort_dest_repo: materials
-
-  lab-08:
-    event_datetime: 2026-10-29T14:00
-    deploy:
-      - course_source_repo: course-materials-f2026
-        course_source_path: labs/08_neural-networks
-        cohort_dest_repo: materials
+        course_source_path: readings/08_nlp-2-encoder-decoder-and-attention
+        deploy_datetime: 2026-10-22T09:00
 
   lecture-09:
     event_datetime: 2026-11-03T10:00
+    title: "Further topics in deep learning"
+    description: >
+      Uncertainty quantification, generative models, and the state of the research frontier.
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: lectures/09_feature-engineering-and-pipelines
-        cohort_dest_repo: materials
-        deploy_datetime: 2026-11-03T08:00
-      - course_source_repo: course-materials-f2026
-        course_source_path: readings/09_feature-engineering-and-pipelines
-        cohort_dest_repo: materials
+        course_source_path: readings/09_further-topics
+        deploy_datetime: 2026-10-29T09:00
 
   lab-09:
     event_datetime: 2026-11-05T14:00
+    title: "Lab 9"
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: labs/09_feature-engineering-and-pipelines
-        cohort_dest_repo: materials
+        course_source_path: labs/09_further-topics
 
   lecture-10:
     event_datetime: 2026-11-10T10:00
+    title: "Policy approaches to regulate deep learning"
+    description: >
+      Regulation, auditing and the documented harms of large models, with the EU AI Act as t
+      he worked case.
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: lectures/10_evaluation-and-ethics
-        cohort_dest_repo: materials
-        deploy_datetime: 2026-11-10T08:00
-      - course_source_repo: course-materials-f2026
-        course_source_path: readings/10_evaluation-and-ethics
-        cohort_dest_repo: materials
+        course_source_path: readings/10_policy-approaches-and-responsible-implementation
+        deploy_datetime: 2026-11-05T09:00
 
-  lab-10:
-    event_datetime: 2026-11-12T14:00
+  lecture-11:
+    event_datetime: 2026-11-17T10:00
+    title: "Deep learning in practice"
+    description: >
+      Putting a model into a real workflow: compute, reproducibility and maintenance.
     deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: labs/10_evaluation-and-ethics
-        cohort_dest_repo: materials
+        course_source_path: readings/11_deep-learning-in-practice
+        deploy_datetime: 2026-11-12T09:00
 
-# ------------------------------------------------------------------------- assignments
-# Each assignment's WHOLE lifecycle in one block. A bare due_datetime is END of day
-# (23:59:59) - "due on the 13th" closes at day's end. Autograding needs no entry in
-# `releases:`: at each grading_datetime the hourly cron freezes the submission snapshot and
-# runs the autograder once (individual/group comes from the template's own grading.yml,
-# unless `type:` below overrides it).
+  lab-11:
+    event_datetime: 2026-11-19T14:00
+    title: "Lab 11"
+    deploy:
+      - course_source_repo: course-materials-f2026
+        course_source_path: labs/11_deep-learning-in-practice
+
+  lecture-12:
+    event_datetime: 2026-11-24T10:00
+    title: "Tutorial presentations"
+    description: >
+      Students present their tutorial topic to the group.
+    # nothing staged yet - the row still appears, marked "not released yet"
+
+# --------------------------------------------------------------------------- assignments
 assignments:
+
   assignment-1:
-    course_source_repo: assignment-1-f2026   # required: the course-org repo it hands out from
-    handout_datetime: 2026-09-22T14:00   # one private repo per enrolled student, automatic
-    due_datetime: 2026-10-13T23:59       # what students see
-    grading_datetime: 2026-10-15T23:59   # grading-only, never shown to students: the moment
-                                         # the submission snapshot freezes AND the hourly
-                                         # cron autogrades this assignment, once.
+    course_source_repo: assignment-1-f2026
+    handout_datetime: 2026-09-22T14:00
+    due_datetime: 2026-10-13T23:59
+    type: individual
+
   assignment-2:
-    course_source_repo: assignment-2-f2026   # required: the course-org repo it hands out from
+    course_source_repo: assignment-2-f2026
     handout_datetime: 2026-10-06T14:00
     due_datetime: 2026-11-03T23:59
-    grading_datetime: 2026-11-05T23:59
-  assignment-3-project:
-    course_source_repo: assignment-3-project-f2026   # required: the course-org repo it hands out from
-    handout_datetime: 2026-10-20T14:00
-    type: group                 # per-team handout + grading (also set in the
-                                # template's grading.yml)
-    due_datetime: 2026-11-27T23:59
-    max_team_size: 3            # the welcome "Join team" flow refuses a 4th member
-    grading_datetime: 2026-11-30T23:59   # the group project: graded per team (teams.csv)
+    grading_datetime: 2026-11-03T23:59
+    type: individual
 
-# ----------------------------------------------------------------------------- events
-# DISPLAY-ONLY rows: nothing is released, the site's schedule simply shows them.
-# `type: exam` colours the row as an exam; leave `type` out for anything else (a clinic, a
-# guest lecture, a review session) and it renders as a special event.
+  assignment-3-project:
+    course_source_repo: assignment-3-project-f2026
+    handout_datetime: 2026-10-20T14:00
+    due_datetime: 2026-11-27T23:59
+    grading_datetime: 2026-11-30T23:59
+    type: group
+    max_team_size: 3
+
+# -------------------------------------------------------------------------------- events
 events:
+
   midterm-exam:
     type: exam
-    title: Midterm Exam
-    event_datetime: 2026-10-27T10:00   # a real start time, shown as given
-    tbc: true                          # provisional - the site marks it "(TBC)"
+    title: "Midterm Exam"
+    event_datetime: 2026-10-27T10:00
+
   final-exam:
     type: exam
-    title: Final Exam
-    event_datetime: 2026-12-15T14:00
+    title: "Final Exam"
+    event_datetime: 2026-12-15T10:00
 
-  project-clinic:               # no `type:` -> a special event row
-    title: Project clinic
-    event_datetime: 2026-11-17T10:00
-    tbc: true                   # provisional date - the site shows "(TBC)"
-
-  # `event_datetime: tbc` -> an undated TBC row on the site, sorted to end of term; nothing
-  # can fire until a real date replaces it. (`tbc: true` next to a real date, as above,
-  # marks it "(TBC)" instead.)
-  guest-lecture:
-    title: Guest lecture (industry speaker)
+  resit-exam:
+    type: exam
+    title: "Resit Exam"
     event_datetime: tbc
 
+  guest-lecture:
+    title: "Guest lecture: deep learning at the Federal Statistical Office"
+    event_datetime: 2026-10-27T16:00
+
+  reading-week:
+    title: "Reading week - no class"
+    event_datetime: 2026-11-10
