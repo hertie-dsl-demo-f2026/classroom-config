@@ -1,4 +1,4 @@
-github_handle,team,auto,manual,team_grade,adjustment,final,comments,team_comments
+github_handle,team,autograde_score,manual_score,team_score,individual_adjustment,final_grade,individual_comments,team_comments
 amara-okonjo,,10,4,,,93,All ten hidden tests pass. Clean pivoting; both short answers correct.,
 jonas-bergstrom,,7,3,,,67,Solve works but back-substitution assumes a non-zero diagonal - see the singular case. Short answer 2 conflates exact and approximate collinearity.,
 k-nowak-weiss,,9,5,,,93,"Excellent. The one failing test is the singular-matrix guard; everything else is exemplary, and the write-up is the best in the cohort.",
