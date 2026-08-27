@@ -205,8 +205,6 @@ releases:
     description: >
       Uncertainty quantification, generative models, and the state of the research frontier.
     deploy:
-      - course_source_repo: course-materials-f2026
-        course_source_path: lectures/09_further-topics
 
   lab-09:
     event_datetime: 2026-10-01T14:00
@@ -229,8 +227,6 @@ releases:
       Regulation, auditing and the documented harms of large models, with the EU AI Act as t
       he worked case.
     deploy:
-      - course_source_repo: course-materials-f2026
-        course_source_path: lectures/10_policy-approaches-and-responsible-implementation
 
   readings-11:
     event_datetime: 2026-10-08T09:00
@@ -245,8 +241,6 @@ releases:
     description: >
       Putting a model into a real workflow: compute, reproducibility and maintenance.
     deploy:
-      - course_source_repo: course-materials-f2026
-        course_source_path: lectures/11_deep-learning-in-practice
 
   lab-11:
     event_datetime: 2026-10-15T14:00
@@ -260,13 +254,7 @@ releases:
     title: "Tutorial presentations"
     description: >
       Students present their tutorial topic to the group.
-    deploy:
-      # Nothing authored upstream yet. The entry still names where the deck WILL land, and
-      # that is what raises the row: a release entry with no deploy at all is inert (the
-      # site keys its rows off deploy destinations), so this is what makes session 12 show
-      # as "not released yet" rather than not show.
-      - course_source_repo: course-materials-f2026
-        course_source_path: lectures/12_tutorial-presentations
+    # nothing staged yet - the row still appears, marked "not released yet"
 
 # --------------------------------------------------------------------------- assignments
 assignments:
