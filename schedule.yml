@@ -204,7 +204,6 @@ releases:
     title: "Further topics in deep learning"
     description: >
       Uncertainty quantification, generative models, and the state of the research frontier.
-    deploy:
 
   lab-09:
     event_datetime: 2026-10-01T14:00
@@ -226,7 +225,6 @@ releases:
     description: >
       Regulation, auditing and the documented harms of large models, with the EU AI Act as t
       he worked case.
-    deploy:
 
   readings-11:
     event_datetime: 2026-10-08T09:00
@@ -240,7 +238,6 @@ releases:
     title: "Deep learning in practice"
     description: >
       Putting a model into a real workflow: compute, reproducibility and maintenance.
-    deploy:
 
   lab-11:
     event_datetime: 2026-10-15T14:00
