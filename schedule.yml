@@ -4,7 +4,8 @@
 # hourly, so times are honoured to the hour.
 #
 # The DEMO cohort: it deliberately exercises every feature the pipeline has - lecture,
-# lab and readings deploys on staggered clocks, individual and group assignments, exams,
+# lab and readings deploys on staggered clocks (readings ship a week ahead on their own
+# silent entries), individual and group assignments, exams,
 # a dateless TBC row, and display-only special events.
 
 timezone: Europe/Berlin
@@ -12,6 +13,20 @@ semester_start: 2026-08-04
 semester_end: 2026-11-13
 
 releases:
+
+  course-intro:
+    event_datetime: 2026-07-28T09:00
+    show_on_site: false
+    deploy:
+      - course_source_repo: course-materials-f2026
+        course_source_path: SYLLABUS.md
+
+  readings-01:
+    event_datetime: 2026-07-30T09:00
+    show_on_site: false
+    deploy:
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/01_deep-learning-in-public-policy
 
   lecture-01:
     event_datetime: 2026-08-04T10:00
@@ -23,9 +38,6 @@ releases:
       - course_source_repo: course-materials-f2026
         course_source_path: lectures/01_deep-learning-in-public-policy
         deploy_datetime: 2026-08-04T08:00
-      - course_source_repo: course-materials-f2026
-        course_source_path: readings/01_deep-learning-in-public-policy
-        deploy_datetime: 2026-07-30T09:00
 
   lab-01:
     event_datetime: 2026-08-06T14:00
@@ -33,6 +45,13 @@ releases:
     deploy:
       - course_source_repo: course-materials-f2026
         course_source_path: labs/01_deep-learning-in-public-policy
+
+  readings-02:
+    event_datetime: 2026-08-06T09:00
+    show_on_site: false
+    deploy:
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/02_deep-neural-networks-1
 
   lecture-02:
     event_datetime: 2026-08-11T10:00
@@ -44,9 +63,6 @@ releases:
       - course_source_repo: course-materials-f2026
         course_source_path: lectures/02_deep-neural-networks-1
         deploy_datetime: 2026-08-11T08:00
-      - course_source_repo: course-materials-f2026
-        course_source_path: readings/02_deep-neural-networks-1
-        deploy_datetime: 2026-08-06T09:00
 
   lab-02:
     event_datetime: 2026-08-13T14:00
@@ -54,6 +70,13 @@ releases:
     deploy:
       - course_source_repo: course-materials-f2026
         course_source_path: labs/02_deep-neural-networks-1
+
+  readings-03:
+    event_datetime: 2026-08-13T09:00
+    show_on_site: false
+    deploy:
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/03_deep-neural-networks-2
 
   lecture-03:
     event_datetime: 2026-08-18T10:00
@@ -65,9 +88,6 @@ releases:
       - course_source_repo: course-materials-f2026
         course_source_path: lectures/03_deep-neural-networks-2
         deploy_datetime: 2026-08-18T08:00
-      - course_source_repo: course-materials-f2026
-        course_source_path: readings/03_deep-neural-networks-2
-        deploy_datetime: 2026-08-13T09:00
 
   lab-03:
     event_datetime: 2026-08-20T14:00
@@ -75,6 +95,13 @@ releases:
     deploy:
       - course_source_repo: course-materials-f2026
         course_source_path: labs/03_deep-neural-networks-2
+
+  readings-04:
+    event_datetime: 2026-08-20T09:00
+    show_on_site: false
+    deploy:
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/04_computer-vision-1-cnns
 
   lecture-04:
     event_datetime: 2026-08-25T10:00
@@ -85,9 +112,6 @@ releases:
       - course_source_repo: course-materials-f2026
         course_source_path: lectures/04_computer-vision-1-cnns
         deploy_datetime: 2026-08-25T08:00
-      - course_source_repo: course-materials-f2026
-        course_source_path: readings/04_computer-vision-1-cnns
-        deploy_datetime: 2026-08-20T09:00
 
   lab-04:
     event_datetime: 2026-08-27T14:00
@@ -95,6 +119,13 @@ releases:
     deploy:
       - course_source_repo: course-materials-f2026
         course_source_path: labs/04_computer-vision-1-cnns
+
+  readings-05:
+    event_datetime: 2026-08-27T09:00
+    show_on_site: false
+    deploy:
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/05_computer-vision-2-modern-cnns
 
   lecture-05:
     event_datetime: 2026-09-01T10:00
@@ -106,9 +137,6 @@ releases:
       - course_source_repo: course-materials-f2026
         course_source_path: lectures/05_computer-vision-2-modern-cnns
         deploy_datetime: 2026-09-01T08:00
-      - course_source_repo: course-materials-f2026
-        course_source_path: readings/05_computer-vision-2-modern-cnns
-        deploy_datetime: 2026-08-27T09:00
 
   lab-05:
     event_datetime: 2026-09-03T14:00
@@ -146,6 +174,13 @@ releases:
         course_source_path: lectures/07_natural-language-processing-1
         deploy_datetime: 2026-09-15T08:00
 
+  readings-08:
+    event_datetime: 2026-09-17T09:00
+    show_on_site: false
+    deploy:
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/08_nlp-2-encoder-decoder-and-attention
+
   lecture-08:
     event_datetime: 2026-09-22T10:00
     title: "Natural language processing (2): Encoder-decoder architecture and attention"
@@ -156,9 +191,13 @@ releases:
       - course_source_repo: course-materials-f2026
         course_source_path: lectures/08_nlp-2-encoder-decoder-and-attention
         deploy_datetime: 2026-09-22T08:00
+
+  readings-09:
+    event_datetime: 2026-09-24T09:00
+    show_on_site: false
+    deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: readings/08_nlp-2-encoder-decoder-and-attention
-        deploy_datetime: 2026-09-17T09:00
+        course_source_path: readings/09_further-topics
 
   lecture-09:
     event_datetime: 2026-09-29T10:00
@@ -166,9 +205,6 @@ releases:
     description: >
       Uncertainty quantification, generative models, and the state of the research frontier.
     deploy:
-      - course_source_repo: course-materials-f2026
-        course_source_path: readings/09_further-topics
-        deploy_datetime: 2026-09-24T09:00
 
   lab-09:
     event_datetime: 2026-10-01T14:00
@@ -177,6 +213,13 @@ releases:
       - course_source_repo: course-materials-f2026
         course_source_path: labs/09_further-topics
 
+  readings-10:
+    event_datetime: 2026-10-01T09:00
+    show_on_site: false
+    deploy:
+      - course_source_repo: course-materials-f2026
+        course_source_path: readings/10_policy-approaches-and-responsible-implementation
+
   lecture-10:
     event_datetime: 2026-10-06T10:00
     title: "Policy approaches to regulate deep learning"
@@ -184,9 +227,13 @@ releases:
       Regulation, auditing and the documented harms of large models, with the EU AI Act as t
       he worked case.
     deploy:
+
+  readings-11:
+    event_datetime: 2026-10-08T09:00
+    show_on_site: false
+    deploy:
       - course_source_repo: course-materials-f2026
-        course_source_path: readings/10_policy-approaches-and-responsible-implementation
-        deploy_datetime: 2026-10-01T09:00
+        course_source_path: readings/11_deep-learning-in-practice
 
   lecture-11:
     event_datetime: 2026-10-13T10:00
@@ -194,9 +241,6 @@ releases:
     description: >
       Putting a model into a real workflow: compute, reproducibility and maintenance.
     deploy:
-      - course_source_repo: course-materials-f2026
-        course_source_path: readings/11_deep-learning-in-practice
-        deploy_datetime: 2026-10-08T09:00
 
   lab-11:
     event_datetime: 2026-10-15T14:00
