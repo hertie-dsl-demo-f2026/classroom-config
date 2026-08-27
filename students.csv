@@ -1,9 +1,9 @@
-student_id,hertie_email,name,github_handle,github_id,section,enrol_code,role
-260001,amara.okonjo@students.demo.hertie-school.org,Amara Okonjo,,,A,,enrolled
-260002,jonas.bergstrom@students.demo.hertie-school.org,Jonas Bergstrom,,,A,,enrolled
-260003,k.nowak.weiss@students.demo.hertie-school.org,"Nowak-Weiss, Katarzyna",henrycgbaker,118537936,A,dsl-rdgmsy,enrolled
-260004,miguel.santos@students.demo.hertie-school.org,Miguel Santos,,,B,,enrolled
-260005,priya.raman@students.demo.hertie-school.org,Priya Raman,,,B,,enrolled
-260006,tomas.havel@students.demo.hertie-school.org,Tomas Havel,,,B,,enrolled
-260007,felix.brandt@students.demo.hertie-school.org,Felix Brandt,,,B,,auditor
-260008,yuki.tanaka@students.demo.hertie-school.org,Yuki Tanaka,,,A,,auditor
+hertie_email,name,github_handle,github_id,enrol_code,role
+amara.okonjo@students.demo.hertie-school.org,Amara Okonjo,,,,enrolled
+jonas.bergstrom@students.demo.hertie-school.org,Jonas Bergstrom,,,,enrolled
+k.nowak.weiss@students.demo.hertie-school.org,"Nowak-Weiss, Katarzyna",henrycgbaker,118537936,dsl-rdgmsy,enrolled
+miguel.santos@students.demo.hertie-school.org,Miguel Santos,,,,enrolled
+priya.raman@students.demo.hertie-school.org,Priya Raman,,,,enrolled
+tomas.havel@students.demo.hertie-school.org,Tomas Havel,,,,enrolled
+felix.brandt@students.demo.hertie-school.org,Felix Brandt,,,,auditor
+yuki.tanaka@students.demo.hertie-school.org,Yuki Tanaka,,,,auditor
