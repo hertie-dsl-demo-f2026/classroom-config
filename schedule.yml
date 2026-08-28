@@ -204,6 +204,10 @@ releases:
     title: "Further topics in deep learning"
     description: >
       Uncertainty quantification, generative models, and the state of the research frontier.
+    deploy:
+      - course_source_repo: lecture-code-f2026
+        course_source_path: dldemo/uncertainty.py
+        cohort_dest_path: code/dldemo/uncertainty.py
 
   lab-09:
     event_datetime: 2026-10-01T14:00
@@ -225,6 +229,10 @@ releases:
     description: >
       Regulation, auditing and the documented harms of large models, with the EU AI Act as t
       he worked case.
+    deploy:
+      - course_source_repo: lecture-code-f2026
+        course_source_path: dldemo/audit.py
+        cohort_dest_path: code/dldemo/audit.py
 
   readings-11:
     event_datetime: 2026-10-08T09:00
@@ -238,6 +246,10 @@ releases:
     title: "Deep learning in practice"
     description: >
       Putting a model into a real workflow: compute, reproducibility and maintenance.
+    deploy:
+      - course_source_repo: lecture-code-f2026
+        course_source_path: dldemo/serving.py
+        cohort_dest_path: code/dldemo/serving.py
 
   lab-11:
     event_datetime: 2026-10-15T14:00
@@ -261,9 +273,11 @@ assignments:
     course_source_repo: assignment-1-f2026
     handout_datetime: 2026-08-18T14:00
     due_datetime: 2026-09-08T23:59
+    solution_datetime: 2026-09-15T09:00
     type: individual
 
   assignment-2:
+    title: Classification and evaluation
     course_source_repo: assignment-2-f2026
     handout_datetime: 2026-09-01T14:00
     due_datetime: 2026-09-29T23:59
