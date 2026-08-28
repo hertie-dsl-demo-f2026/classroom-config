@@ -32,8 +32,8 @@ releases:
     event_datetime: 2026-08-04T10:00
     title: "Deep learning in public policy"
     description: >
-      What deep learning is, where it already sits in public-sector decision making, and wha
-      t this course will and will not claim for it.
+      What deep learning is, where it already sits in public-sector decision making, and
+      what this course will and will not claim for it.
     deploy:
       - course_source_repo: course-materials-f2026
         course_source_path: lectures/01_deep-learning-in-public-policy
@@ -57,8 +57,8 @@ releases:
     event_datetime: 2026-08-11T10:00
     title: "Deep neural networks (1)"
     description: >
-      Perceptrons, activation functions and the forward pass; why depth buys representationa
-      l power.
+      Perceptrons, activation functions and the forward pass; why depth buys
+      representational power.
     deploy:
       - course_source_repo: course-materials-f2026
         course_source_path: lectures/02_deep-neural-networks-1
@@ -82,8 +82,8 @@ releases:
     event_datetime: 2026-08-18T10:00
     title: "Deep neural networks (2)"
     description: >
-      Backpropagation and gradient descent in practice: initialisation, learning rates, and
-      the failure modes of each.
+      Backpropagation and gradient descent in practice: initialisation, learning rates,
+      and the failure modes of each.
     deploy:
       - course_source_repo: course-materials-f2026
         course_source_path: lectures/03_deep-neural-networks-2
@@ -131,8 +131,8 @@ releases:
     event_datetime: 2026-09-01T10:00
     title: "Computer vision (2): Modern CNNs, implementation and applications"
     description: >
-      Residual connections and modern architectures, with applications to satellite imagery
-      for policy.
+      Residual connections and modern architectures, with applications to satellite
+      imagery for policy.
     deploy:
       - course_source_repo: course-materials-f2026
         course_source_path: lectures/05_computer-vision-2-modern-cnns
@@ -149,8 +149,8 @@ releases:
     event_datetime: 2026-09-08T10:00
     title: "Sequence methods and time-series analysis"
     description: >
-      Recurrent architectures and their limits; where classical time-series methods remain t
-      he better tool.
+      Recurrent architectures and their limits; where classical time-series methods remain
+      the better tool.
     deploy:
       - course_source_repo: course-materials-f2026
         course_source_path: lectures/06_sequence-methods-and-time-series
@@ -167,8 +167,8 @@ releases:
     event_datetime: 2026-09-15T10:00
     title: "Natural language processing (1)"
     description: >
-      Text as data: tokenisation, embeddings, and what a language model is actually estimati
-      ng.
+      Text as data: tokenisation, embeddings, and what a language model is actually
+      estimating.
     deploy:
       - course_source_repo: course-materials-f2026
         course_source_path: lectures/07_natural-language-processing-1
@@ -185,8 +185,8 @@ releases:
     event_datetime: 2026-09-22T10:00
     title: "Natural language processing (2): Encoder-decoder architecture and attention"
     description: >
-      The attention mechanism and the transformer, read through the papers that introduced t
-      hem.
+      The attention mechanism and the transformer, read through the papers that introduced
+      them.
     deploy:
       - course_source_repo: course-materials-f2026
         course_source_path: lectures/08_nlp-2-encoder-decoder-and-attention
@@ -203,7 +203,8 @@ releases:
     event_datetime: 2026-09-29T10:00
     title: "Further topics in deep learning"
     description: >
-      Uncertainty quantification, generative models, and the state of the research frontier.
+      Uncertainty quantification, generative models, and the state of the research
+      frontier.
     deploy:
       - course_source_repo: lecture-code-f2026
         course_source_path: dldemo/uncertainty.py
@@ -227,8 +228,8 @@ releases:
     event_datetime: 2026-10-06T10:00
     title: "Policy approaches to regulate deep learning"
     description: >
-      Regulation, auditing and the documented harms of large models, with the EU AI Act as t
-      he worked case.
+      Regulation, auditing and the documented harms of large models, with the EU AI Act as
+      the worked case.
     deploy:
       - course_source_repo: lecture-code-f2026
         course_source_path: dldemo/audit.py
