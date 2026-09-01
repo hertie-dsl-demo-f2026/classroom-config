@@ -12,12 +12,6 @@ timezone: Europe/Berlin
 semester_start: 2026-08-04
 semester_end: 2026-11-13
 
-enrolment:
-  send_codes_datetime: 2026-09-01T06:00   # window opens - codes go out from here
-  send_until: 2026-09-30T00:00            # window closes (default: semester_start + 2 weeks)
-  show_on_site: true                      # OPTIONAL - default false, unlike everywhere else
-  title: Enrolment opens
-
 releases:
 
   course-intro:
