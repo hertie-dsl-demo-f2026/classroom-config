@@ -13,15 +13,6 @@ semester_start: 2026-08-04
 semester_end: 2026-11-13
 
 releases:
-  canary-dual-driver:
-    event_datetime: 2026-09-04T18:00
-    show_on_site: false
-    deploy:
-      - course_source_repo: course-materials-f2026
-        course_source_path: readings/09_further-topics
-        cohort_dest_path: readings/09_further-topics
-        deploy_datetime: 2026-09-04T18:00
-
 
   course-intro:
     event_datetime: 2026-07-28T09:00
