@@ -1,0 +1,26 @@
+# -------------------------------------------------------------------------------------------
+# GRADING SHEET · assignment-90-e2e54e816 · e2e assignment-90-e2e54e816 · INSTRUCTOR-OWNED
+#
+# From grading_config.yml / schedule.yml (edit THERE, not here):
+#   individual assignment · autograde on
+#   due Sat 5 Sep 2026 21:15 · no late work accepted
+# Status: OPEN - 0 of 2 students have submitted
+#
+# Auto-filled by the toolkit (you never type these): every `info:` block. `submitted` and
+# `days_late` fill at the due date and refresh after each late push; `autograde` fills once at
+# the cutoff. All of them freeze at the cutoff.
+# You fill in: score_individual, adjustment_individual, feedback_individual,
+# notes_not_shared_with_students. Anything you type is never touched. Nothing reaches a student
+# until you run Distribute grades. YAML comments you add are not preserved when the toolkit
+# rewrites the file.
+# -------------------------------------------------------------------------------------------
+submissions:
+  henrycgbaker:
+    info:                       # toolkit-owned, shown for information only - nothing is declared here
+      submitted:
+      days_late:
+      autograde:
+    score_individual:
+    adjustment_individual:
+    feedback_individual:
+    notes_not_shared_with_students:
