@@ -268,14 +268,6 @@ releases:
 
 # --------------------------------------------------------------------------- assignments
 assignments:
-# dsl-e2e:e2e54e816 begin
-  assignment-90-e2e54e816:
-    title: e2e assignment-90-e2e54e816
-    course_source_repo: assignment-90-e2e54e816
-    handout_datetime: 2026-09-05T20:50
-    due_datetime: 2026-09-05T21:15
-    grading_datetime: 2026-09-05T21:35
-# dsl-e2e:e2e54e816 end
 
   assignment-1:
     title: Linear regression from scratch
