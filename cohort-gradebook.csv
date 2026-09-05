@@ -1,8 +1,7 @@
-github_handle,assignment-1_team,assignment-1_auto,assignment-1_manual,assignment-1_team_grade,assignment-1_adjustment,assignment-1_final,assignment-1_comments,assignment-1_team_comments,assignment-3-project_team,assignment-3-project_auto,assignment-3-project_manual,assignment-3-project_team_grade,assignment-3-project_adjustment,assignment-3-project_final,assignment-3-project_comments,assignment-3-project_team_comments
-amara-okonjo,,10,4,,,93,All ten hidden tests pass. Clean pivoting; both short answers correct.,,team-alpha,,,84,+3,87,Designed the grouped split and argued it well at the clinic; carried the evaluation section.,"Strong project. The grouped CV is correctly motivated and the baseline is honest. The subgroup table needs intervals, and the model card's monitoring section is thin."
-henrycgbaker,,8,,,,,,,,,,,,,,
-jonas-bergstrom,,7,3,,,67,Solve works but back-substitution assumes a non-zero diagonal - see the singular case. Short answer 2 conflates exact and approximate collinearity.,,team-alpha,,,84,-2,82,Solid contribution to the pipeline; two of the three clinic actions were left to teammates.,"Strong project. The grouped CV is correctly motivated and the baseline is honest. The subgroup table needs intervals, and the model card's monitoring section is thin."
-k-nowak-weiss,,9,5,,,93,"Excellent. The one failing test is the singular-matrix guard; everything else is exemplary, and the write-up is the best in the cohort.",,team-beta,,,76,+2,78,Wrote the leakage audit that caught a post-outcome column two days before submission.,"Good work, weakened by a late change of question. The report is clear and the reproducibility is exemplary, but the results section compares against no baseline."
-miguel-santos,,5,2,,,47,"Normal equations correct, but no pivoting at all, so two tests fail on conditioning. Short answers are one sentence each - the brief asks for three to five.",,team-beta,,,76,0,76,"Even, reliable contribution across data and modelling.","Good work, weakened by a late change of question. The report is clear and the reproducibility is exemplary, but the results section compares against no baseline."
-priya-raman,,9,4,,,87,Strong. R-squared returns 0.0 rather than a negative value in one edge case.,,team-gamma,,,,,,,
-tomas-havel,,0,,,,,No submission on or before the deadline (including the 48-hour grace window). Contact the lecturer before the next deadline.,,team-gamma,,,,,,,
+hertie_email,name,github_handle,assignment-1,assignment-3-project
+h.baker@hertie-school.org,Amara Okonjo,henrycgbaker,,
+jonas.bergstrom@students.demo.hertie-school.org,Jonas Bergstrom,,,
+k.nowak.weiss@students.demo.hertie-school.org,"Nowak-Weiss, Katarzyna",henrycgbaker,,
+miguel.santos@students.demo.hertie-school.org,Miguel Santos,,,
+priya.raman@students.demo.hertie-school.org,Priya Raman,,,
+tomas.havel@students.demo.hertie-school.org,Tomas Havel,,,
