@@ -14,15 +14,6 @@ semester_end: 2026-11-13
 
 releases:
 
-  canary-ds01-tick:
-    event_datetime: 2026-09-05T20:28
-    show_on_site: false
-    deploy:
-      - course_source_repo: course-materials-f2026
-        course_source_path: readings/11_deep-learning-in-practice
-        cohort_dest_path: readings/11_deep-learning-in-practice
-        deploy_datetime: 2026-09-05T20:28
-
   course-intro:
     event_datetime: 2026-07-28T09:00
     show_on_site: false
