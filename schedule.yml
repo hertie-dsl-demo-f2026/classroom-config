@@ -283,7 +283,6 @@ assignments:
     handout_datetime: 2026-08-18T14:00
     due_datetime: 2026-09-08T23:59
     solution_datetime: 2026-09-15T09:00
-    type: individual
 
   assignment-2:
     title: Classification and evaluation
@@ -291,7 +290,6 @@ assignments:
     handout_datetime: 2026-09-01T14:00
     due_datetime: 2026-09-29T23:59
     grading_datetime: 2026-09-29T23:59
-    type: individual
 
   assignment-3-project:
     title: Group project
@@ -299,8 +297,6 @@ assignments:
     handout_datetime: 2026-09-15T14:00
     due_datetime: 2026-10-23T23:59
     grading_datetime: 2026-10-26T23:59
-    type: group
-    max_team_size: 3
 
 # -------------------------------------------------------------------------------- events
 events:
