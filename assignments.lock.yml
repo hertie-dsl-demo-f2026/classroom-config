@@ -23,3 +23,6 @@ assignments:
   assignment-3-project:
     team_formation: self_select
     max_team_size: 3
+  assignment-90-e2e729d75:
+    team_formation: none
+    max_team_size: 4
