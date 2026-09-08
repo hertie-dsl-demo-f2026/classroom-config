@@ -259,14 +259,6 @@ releases:
       - course_source_repo: course-materials-f2026
         course_source_path: labs/11_deep-learning-in-practice
 
-  notification-trial:
-    event_datetime: 2026-09-08T20:00
-    show_on_site: false
-    deploy:
-      - course_source_repo: course-materials-f2026
-        course_source_path: lectures/99_notification-trial
-        deploy_datetime: 2026-09-08T20:00
-
   lecture-12:
     event_datetime: 2026-10-20T10:00
     title: "Tutorial presentations"
