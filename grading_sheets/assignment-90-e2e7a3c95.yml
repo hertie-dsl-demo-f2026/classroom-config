@@ -21,7 +21,7 @@ submissions:
       days_late: 0
       autograde: 0/1
       checked: 2026-09-08T15:13+02:00
-    score_individual:
+    score_individual: 88
     adjustment_individual:
-    feedback_individual:
+    feedback_individual: e2e feedback for the student
     notes_not_shared_with_students:
