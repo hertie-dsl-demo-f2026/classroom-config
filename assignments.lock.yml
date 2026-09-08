@@ -16,10 +16,10 @@
 assignments:
   assignment-1:
     team_formation: none
-    max_team_size: 5
+    max_team_size: 4
   assignment-2:
     team_formation: none
-    max_team_size: 5
+    max_team_size: 4
   assignment-3-project:
     team_formation: self_select
-    max_team_size: 5
+    max_team_size: 3
