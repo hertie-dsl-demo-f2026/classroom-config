@@ -273,8 +273,8 @@ assignments:
     title: e2e assignment-90-e2e21a07c
     course_source_repo: assignment-90-e2e21a07c
     handout_datetime: 2026-09-09T12:05
-    due_datetime: 2026-09-09T12:30
-    grading_datetime: 2026-09-09T12:50
+    due_datetime: 2026-09-09T12:15
+    grading_datetime: 2026-09-09T12:46
 # dsl-e2e:e2e21a07c end
 
   assignment-1:
