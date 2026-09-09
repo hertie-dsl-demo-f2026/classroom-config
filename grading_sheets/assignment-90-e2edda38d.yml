@@ -3,8 +3,8 @@
 #
 # From grading_config.yml / schedule.yml (edit THERE, not here):
 #   individual assignment · autograde on
-#   due Wed 9 Sep 2026 11:26 · late work to Wed 9 Sep 2026 11:57 at 10%/day
-# Status: OPEN - 1 of 1 students have submitted; late pushes still update `info:` until the cutoff.
+#   due Wed 9 Sep 2026 11:30 · late work to Wed 9 Sep 2026 11:31 at 10%/day
+# Status: FROZEN Wed 9 Sep 2026 11:31
 #
 # Auto-filled by the toolkit (you never type these): every `info:` block. `submitted` and
 # `days_late` fill at the due date and refresh after each late push; `autograde` fills once at
@@ -19,8 +19,8 @@ submissions:
     info:                       # toolkit-owned, shown for information only - nothing is declared here
       submitted: 2026-09-09T11:27+02:00
       days_late: 0
-      autograde:
-      checked: 2026-09-09T11:28+02:00
+      autograde: 0/1
+      checked: 2026-09-09T11:34+02:00
     score_individual:
     adjustment_individual:
     feedback_individual:
