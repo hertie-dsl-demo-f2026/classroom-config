@@ -273,8 +273,8 @@ assignments:
     title: e2e assignment-90-e2edda38d
     course_source_repo: assignment-90-e2edda38d
     handout_datetime: 2026-09-09T11:16
-    due_datetime: 2026-09-09T11:41
-    grading_datetime: 2026-09-09T12:01
+    due_datetime: 2026-09-09T11:26
+    grading_datetime: 2026-09-09T11:57
 # dsl-e2e:e2edda38d end
 
   assignment-1:
