@@ -11,11 +11,6 @@
 timezone: Europe/Berlin
 semester_start: 2026-08-04
 semester_end: 2026-11-13
-
-archive:                      # the cohort goes read-only on this date; without this block nothing is ever archived
-  date: 2027-01-12            # default when omitted: semester_end + 60 days
-  show_on_site: true          # a "Cohort archived" row on the site's Schedule tab, notice 14 days out
-
 releases:
 
   course-intro:
@@ -319,3 +314,11 @@ events:
   reading-week:
     title: "Reading week - no class"
     event_datetime: 2026-10-06
+
+# LAST, because it is the end of the term: writing this block is what archives the cohort
+# at all - without it, nothing ever freezes.
+archive:
+  date: 2027-01-12            # optional (default: semester_end + 60 days)
+  show_on_site: true          # a "Cohort archived" row on the site's Schedule tab, notice 14 days out
+  description: >-             # optional, but ALL that row and the Updates box SAY - there is no default, so without this they say nothing
+    This cohort is archived on 2027-01-12: every repository in it becomes read-only. You keep read access, so you can still fork or clone anything you want to keep working on into your own account.
