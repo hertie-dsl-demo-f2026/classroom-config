@@ -12,9 +12,6 @@ timezone: Europe/Berlin
 semester_start: 2026-08-04
 semester_end: 2026-11-13
 
-archive:
-  date: 2026-09-20
-
 releases:
 
   course-intro:
