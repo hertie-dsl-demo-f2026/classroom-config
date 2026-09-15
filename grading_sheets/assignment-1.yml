@@ -17,10 +17,10 @@
 submissions:
   henrycgbaker:
     info:                       # toolkit-owned, shown for information only - nothing is declared here
-      submitted: 2026-07-30T13:39+02:00
-      days_late: 0
+      submitted: 2026-09-15T09:01+02:00
+      days_late: 7
       autograde:
-      checked: 2026-09-09T00:00+02:00
+      checked: 2026-09-15T09:15+02:00
     score_individual:
     adjustment_individual:
     feedback_individual:
