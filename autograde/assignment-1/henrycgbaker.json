@@ -1,4 +1,6 @@
 {
+  "repo": "assignment-1-henrycgbaker",
+  "ref": "#9518ed4",
   "score": 8,
   "max": 10,
   "tests": [
@@ -43,5 +45,5 @@
       "passed": false
     }
   ],
-  "commit": "b4f186082d5d7c35a6954265c0703801a35b9c4e"
+  "commit": "f07ae5f198c1bd198a6ae0a4c711689e7090c2c6"
 }
