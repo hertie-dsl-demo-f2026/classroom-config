@@ -35,18 +35,3 @@ assignments:
   assignment-7:
     team_formation: none
     max_team_size: 4
-  assignment-90-e2e0745f1-external:
-    team_formation: none
-    max_team_size: 4
-  assignment-90-e2e0745f1-private:
-    team_formation: none
-    max_team_size: 4
-  assignment-90-e2e0745f1-public:
-    team_formation: none
-    max_team_size: 4
-  assignment-90-e2e0745f1-shared:
-    team_formation: none
-    max_team_size: 4
-  assignment-90-e2e0745f1-student-choice:
-    team_formation: none
-    max_team_size: 4
