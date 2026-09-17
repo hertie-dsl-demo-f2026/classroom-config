@@ -269,6 +269,38 @@ releases:
 
 # --------------------------------------------------------------------------- assignments
 assignments:
+# dsl-e2e:e2ee096fb begin
+  assignment-90-e2ee096fb-private:
+    title: e2e assignment-90-e2ee096fb-private
+    course_source_repo: assignment-90-e2ee096fb-private
+    handout_datetime: 2026-09-17T03:26
+    due_datetime: 2026-09-17T03:51
+    grading_datetime: 2026-09-17T04:11
+  assignment-90-e2ee096fb-public:
+    title: e2e assignment-90-e2ee096fb-public
+    course_source_repo: assignment-90-e2ee096fb-public
+    handout_datetime: 2026-09-17T03:26
+    due_datetime: 2026-09-17T03:51
+    grading_datetime: 2026-09-17T04:11
+  assignment-90-e2ee096fb-student-choice:
+    title: e2e assignment-90-e2ee096fb-student-choice
+    course_source_repo: assignment-90-e2ee096fb-student-choice
+    handout_datetime: 2026-09-17T03:26
+    due_datetime: 2026-09-17T03:51
+    grading_datetime: 2026-09-17T04:11
+  assignment-90-e2ee096fb-external:
+    title: e2e assignment-90-e2ee096fb-external
+    course_source_repo: assignment-90-e2ee096fb-external
+    handout_datetime: 2026-09-17T03:26
+    due_datetime: 2026-09-17T03:51
+    grading_datetime: 2026-09-17T04:11
+  assignment-90-e2ee096fb-shared:
+    title: e2e assignment-90-e2ee096fb-shared
+    course_source_repo: assignment-90-e2ee096fb-shared
+    handout_datetime: 2026-09-17T03:26
+    due_datetime: 2026-09-17T03:51
+    grading_datetime: 2026-09-17T04:11
+# dsl-e2e:e2ee096fb end
 
   assignment-1:
     title: Linear regression from scratch
