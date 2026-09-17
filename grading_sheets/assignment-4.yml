@@ -20,7 +20,8 @@ submissions:
       submitted:
       days_late:
       completion:
-    score_individual:
+    score_individual: 88
     adjustment_individual:
-    feedback_individual:
+    feedback_individual: |
+      A strong hackathon entry - the demo is convincing and the write-up is honest about its limits.
     notes_not_shared_with_students:
