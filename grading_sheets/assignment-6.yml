@@ -19,7 +19,8 @@ submissions:
     info:                       # toolkit-owned, shown for information only - nothing is declared here
       submitted:
       days_late:
-    score_individual:
+    score_individual: 74
     adjustment_individual:
-    feedback_individual:
+    feedback_individual: |
+      A fair referee report - the summary is accurate, but the recommendation needs more evidence.
     notes_not_shared_with_students:
