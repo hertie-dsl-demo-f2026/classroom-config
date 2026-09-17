@@ -23,3 +23,18 @@ assignments:
   assignment-3-project:
     team_formation: self_select
     max_team_size: 3
+  assignment-90-e2eecda7a-external:
+    team_formation: none
+    max_team_size: 4
+  assignment-90-e2eecda7a-private:
+    team_formation: none
+    max_team_size: 4
+  assignment-90-e2eecda7a-public:
+    team_formation: none
+    max_team_size: 4
+  assignment-90-e2eecda7a-shared:
+    team_formation: none
+    max_team_size: 4
+  assignment-90-e2eecda7a-student-choice:
+    team_formation: none
+    max_team_size: 4
