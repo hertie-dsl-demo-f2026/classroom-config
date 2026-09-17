@@ -2,16 +2,16 @@
 # GRADING SHEET · assignment-7 · Moodle essay · INSTRUCTOR-OWNED
 #
 # From grading_config.yml / schedule.yml (edit THERE, not here):
-#   individual assignment · submitted outside GitHub · autograde off
+#   individual assignment · 100 points (Argument 40, Evidence 30, Writing 30) · submitted outside GitHub · autograde off
 #   due Sun 20 Sep 2026 23:59 · no late arithmetic
 # Status: OPEN - submitted outside GitHub
 #
 # Auto-filled by the toolkit: nothing. This assignment is submitted outside GitHub, so there is
 # no `info:` block and no late arithmetic.
-# You fill in: score_individual, adjustment_individual, feedback_individual,
-# notes_not_shared_with_students. Anything you type is never touched. Nothing reaches a student
-# until you run Distribute grades. YAML comments you add are not preserved when the toolkit
-# rewrites the file.
+# You fill in: score_individual (one value per question; max points shown beside each),
+# adjustment_individual, feedback_individual, notes_not_shared_with_students. Anything you type
+# is never touched. Nothing reaches a student until you run Distribute grades. YAML comments
+# you add are not preserved when the toolkit rewrites the file.
 # -------------------------------------------------------------------------------------------
 submissions:
   henrycgbaker:
