@@ -291,6 +291,34 @@ assignments:
     due_datetime: 2026-10-23T23:59
     grading_datetime: 2026-10-26T23:59
 
+  assignment-4:
+    title: Hackathon showcase
+    course_source_repo: assignment-4-f2026
+    handout_datetime: 2026-09-17T04:35
+    due_datetime: 2026-09-20T23:59
+    grading_datetime: 2026-09-21T23:59
+
+  assignment-5:
+    title: Portfolio piece
+    course_source_repo: assignment-5-f2026
+    handout_datetime: 2026-09-17T04:35
+    due_datetime: 2026-09-20T23:59
+    grading_datetime: 2026-09-21T23:59
+
+  assignment-6:
+    title: Referee reports
+    course_source_repo: assignment-6-f2026
+    handout_datetime: 2026-09-17T04:35
+    due_datetime: 2026-09-20T23:59
+    grading_datetime: 2026-09-21T23:59
+
+  assignment-7:
+    title: Moodle essay
+    course_source_repo: assignment-7-f2026
+    handout_datetime: 2026-09-17T04:35
+    due_datetime: 2026-09-20T23:59
+    grading_datetime: 2026-09-21T23:59
+
 # -------------------------------------------------------------------------------- events
 events:
 
