@@ -9,6 +9,14 @@
 #                   assigned      the teaching team writes teams.csv; the form refuses
 #                   none          an individual assignment; the form refuses
 #   max_team_size:  the cap the form enforces (group assignments only)
+#   team_formation_window:
+#                   open      students may form teams for it now
+#                   pending   handed out later; the window has not opened yet
+#                   closed    the window has shut, or there is no date to open it on
+#                   none      not a self-select group assignment, so there is no window
+#   team_formation_closes:
+#                   the date that window shuts, bare ISO (`2026-10-04`), for the refusal
+#                   to name - empty when there is no window, or no date to give
 #
 # An assignment whose course template does not exist yet is locked to `none`:
 # until the template says what it is, nobody can mint a GitHub team for it.
@@ -17,21 +25,35 @@ assignments:
   assignment-1:
     team_formation: none
     max_team_size: 4
+    team_formation_window: none
+    team_formation_closes:
   assignment-2:
     team_formation: none
     max_team_size: 4
+    team_formation_window: none
+    team_formation_closes:
   assignment-3-project:
     team_formation: self_select
     max_team_size: 3
+    team_formation_window: open
+    team_formation_closes: 2026-10-26
   assignment-4:
     team_formation: none
     max_team_size: 4
+    team_formation_window: none
+    team_formation_closes:
   assignment-5:
     team_formation: none
     max_team_size: 4
+    team_formation_window: none
+    team_formation_closes:
   assignment-6:
     team_formation: none
     max_team_size: 4
+    team_formation_window: none
+    team_formation_closes:
   assignment-7:
     team_formation: none
     max_team_size: 4
+    team_formation_window: none
+    team_formation_closes:
