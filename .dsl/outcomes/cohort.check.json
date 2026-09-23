@@ -5,13 +5,13 @@
     "problems": 8,
     "this_week": 3
   },
-  "finished": "2026-09-23T15:28:11Z",
+  "finished": "2026-09-23T16:45:36Z",
   "op": "cohort.check",
   "people": [],
   "preview": false,
   "reasons": [],
-  "run_id": 35881675006,
+  "run_id": 35890908009,
   "schema": "dsl.outcome/1",
-  "started": "2026-09-23T15:27:38Z",
+  "started": "2026-09-23T16:45:16Z",
   "summary": "Status refreshed: 8 problems, 3 items this week."
 }
