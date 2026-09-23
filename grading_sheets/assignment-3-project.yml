@@ -16,6 +16,22 @@
 # grades. YAML comments you add are not preserved when the toolkit rewrites the file.
 # -------------------------------------------------------------------------------------------
 teams:
+  team-latency:
+    info:                       # toolkit-owned, shown for information only - nothing is declared here
+      submitted:
+      days_late:
+      contributions:
+      autograde:
+    score_group:                # yours: the question names and maxima come from grading_config.yml
+      Report:                   # /20
+      Code:                     # /20
+      Presentation:             # /10
+    feedback_group:
+    members:
+      henrycgbaker:
+        adjustment_individual:
+        feedback_individual:
+        notes_not_shared_with_students:
   team-speed:
     info:                       # toolkit-owned, shown for information only - nothing is declared here
       submitted:
