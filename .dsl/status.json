@@ -19,8 +19,11 @@
       "C2": "done",
       "C3": "done",
       "C4": "todo",
-      "C5": "problem",
+      "C5": "done",
       "C6": "done"
+    },
+    "stage_why": {
+      "C4": "course-materials-f2025's SYLLABUS.md is still the placeholder."
     },
     "ready": false,
     "materials": [
@@ -86,12 +89,17 @@
     "app_installed": null,
     "stages": {
       "K1": "done",
-      "K2": "done",
+      "K2": "problem",
       "K3": "todo",
       "K4": "done",
       "K5": "done",
       "K6": "done",
       "K7": "todo"
+    },
+    "stage_why": {
+      "K2": "1 problem needs fixing.",
+      "K3": "No instructor is declared in people.yml yet.",
+      "K7": "Not archived yet; the schedule archives it on Tue 12 Jan."
     },
     "archive_date": "2027-01-12"
   },
@@ -99,9 +107,9 @@
     {
       "id": "sheet:assignment-3-project:GRADING_SHEETS",
       "scope": "cohort",
-      "stage": null,
-      "text": "grading_sheets/assignment-3-project.yml:47 (assignment-3-project line 47): the handle on this line is also in another submission unit, so both are held.",
-      "stops": "That sheet is not refreshed, and none of its marks are returned.",
+      "stage": "marking",
+      "text": "Line 47 of the assignment-3-project marking sheet lists a student who is also in another team or entry, so marks for both are held.",
+      "stops": "That sheet is not updated, and none of its marks are returned.",
       "fix": {
         "repo": "hertie-dsl-demo-f2026/classroom-config",
         "path": "grading_sheets/assignment-3-project.yml",
@@ -113,9 +121,9 @@
     {
       "id": "sheet:assignment-3-project:GRADING_SHEETS:2",
       "scope": "cohort",
-      "stage": null,
-      "text": "grading_sheets/assignment-3-project.yml:99 (assignment-3-project line 99): the handle on this line is also in another submission unit, so both are held.",
-      "stops": "That sheet is not refreshed, and none of its marks are returned.",
+      "stage": "marking",
+      "text": "Line 99 of the assignment-3-project marking sheet lists a student who is also in another team or entry, so marks for both are held.",
+      "stops": "That sheet is not updated, and none of its marks are returned.",
       "fix": {
         "repo": "hertie-dsl-demo-f2026/classroom-config",
         "path": "grading_sheets/assignment-3-project.yml",
@@ -127,9 +135,9 @@
     {
       "id": "sheet:assignment-3-project:GRADING_SHEETS:3",
       "scope": "cohort",
-      "stage": null,
-      "text": "grading_sheets/assignment-3-project.yml:115 (assignment-3-project line 115): the handle on this line is also in another submission unit, so both are held.",
-      "stops": "That sheet is not refreshed, and none of its marks are returned.",
+      "stage": "marking",
+      "text": "Line 115 of the assignment-3-project marking sheet lists a student who is also in another team or entry, so marks for both are held.",
+      "stops": "That sheet is not updated, and none of its marks are returned.",
       "fix": {
         "repo": "hertie-dsl-demo-f2026/classroom-config",
         "path": "grading_sheets/assignment-3-project.yml",
@@ -141,9 +149,9 @@
     {
       "id": "sheet:assignment-3-project:GRADING_SHEETS:4",
       "scope": "cohort",
-      "stage": null,
-      "text": "grading_sheets/assignment-3-project.yml:131 (assignment-3-project line 131): the handle on this line is also in another submission unit, so both are held.",
-      "stops": "That sheet is not refreshed, and none of its marks are returned.",
+      "stage": "marking",
+      "text": "Line 131 of the assignment-3-project marking sheet lists a student who is also in another team or entry, so marks for both are held.",
+      "stops": "That sheet is not updated, and none of its marks are returned.",
       "fix": {
         "repo": "hertie-dsl-demo-f2026/classroom-config",
         "path": "grading_sheets/assignment-3-project.yml",
@@ -155,9 +163,9 @@
     {
       "id": "sheet:assignment-3-project:GRADING_SHEETS:5",
       "scope": "cohort",
-      "stage": null,
-      "text": "grading_sheets/assignment-3-project.yml:147 (assignment-3-project line 147): the handle on this line is also in another submission unit, so both are held.",
-      "stops": "That sheet is not refreshed, and none of its marks are returned.",
+      "stage": "marking",
+      "text": "Line 147 of the assignment-3-project marking sheet lists a student who is also in another team or entry, so marks for both are held.",
+      "stops": "That sheet is not updated, and none of its marks are returned.",
       "fix": {
         "repo": "hertie-dsl-demo-f2026/classroom-config",
         "path": "grading_sheets/assignment-3-project.yml",
@@ -168,10 +176,10 @@
     },
     {
       "id": "template:assignment-1:GRADING_CONFIG",
-      "scope": "course",
-      "stage": "C5",
-      "text": "assignment-1's grading_config.yml (assignments.assignment-1 -> visibility): `visibility: private` does not describe the repos this assignment handed out - 1 of 1 are not private. The value is read when each repo is CREATED, so editing it afterwards moves nothing on its own.",
-      "stops": "Marking uses the toolkit's default for that value.",
+      "scope": "cohort",
+      "stage": "open",
+      "text": "assignment-1's settings say its repos are private, but 1 of 1 handed out in this cohort are not.",
+      "stops": "Those repos stay as they are, and the pages the toolkit writes describe them wrongly.",
       "fix": {
         "repo": "hertie-dsl-demo-course-e1234/assignment-1-f2026",
         "path": "grading_config.yml",
@@ -183,10 +191,10 @@
     },
     {
       "id": "template:assignment-3-project:GRADING_CONFIG",
-      "scope": "course",
-      "stage": "C5",
-      "text": "assignment-3-project's grading_config.yml (assignments.assignment-3-project -> visibility): `visibility: private` does not describe the repos this assignment handed out - 3 of 8 are not private. The value is read when each repo is CREATED, so editing it afterwards moves nothing on its own.",
-      "stops": "Marking uses the toolkit's default for that value.",
+      "scope": "cohort",
+      "stage": "open",
+      "text": "assignment-3-project's settings say its repos are private, but 3 of 8 handed out in this cohort are not.",
+      "stops": "Those repos stay as they are, and the pages the toolkit writes describe them wrongly.",
       "fix": {
         "repo": "hertie-dsl-demo-course-e1234/assignment-3-project-f2026",
         "path": "grading_config.yml",
@@ -197,17 +205,18 @@
       }
     },
     {
-      "id": "template:classroom-config:GRADING_CONFIG",
-      "scope": "course",
-      "stage": "C5",
-      "text": "classroom-config's grading_config.yml (org settings): an assignment in this cohort is handed out with `visibility: student_choice`, which makes each student an admin of their own repo - and **Allow members to delete or transfer repositories** is ON, so a student can delete or move their own submission.",
-      "stops": "Marking uses the toolkit's default for that value.",
+      "id": "org:org-settings:ORG_SETTINGS",
+      "scope": "cohort",
+      "stage": "K2",
+      "text": "This cohort's GitHub member privileges do not suit an assignment that lets students choose their repo's visibility.",
+      "stops": "A student can delete or move their own submission.",
       "fix": {
-        "repo": "hertie-dsl-demo-course-e1234/classroom-config",
-        "path": "grading_config.yml",
+        "repo": "hertie-dsl-demo-f2026/classroom-config",
+        "path": "",
         "line": null,
-        "screen": "template",
-        "entry": "classroom-config"
+        "screen": null,
+        "entry": null,
+        "url": "https://github.com/organizations/hertie-dsl-demo-f2026/settings/member_privileges"
       }
     }
   ],
@@ -920,5 +929,13 @@
     "last_update": "2026-09-23T14:39:03+00:00",
     "stale": false
   },
-  "operations": []
+  "operations": [
+    {
+      "run_id": 35876598740,
+      "op": "cohort.check",
+      "conclusion": "done",
+      "summary": "Finished.",
+      "finished": "2026-09-23T14:46:27Z"
+    }
+  ]
 }
