@@ -931,11 +931,11 @@
   },
   "operations": [
     {
-      "run_id": 35876598740,
+      "run_id": 35881675006,
       "op": "cohort.check",
       "conclusion": "done",
-      "summary": "Finished.",
-      "finished": "2026-09-23T14:46:27Z"
+      "summary": "Status refreshed: 8 problems, 3 items this week.",
+      "finished": "2026-09-23T15:28:11Z"
     }
   ]
 }
