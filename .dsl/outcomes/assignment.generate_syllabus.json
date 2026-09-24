@@ -1,0 +1,14 @@
+{
+  "actor": "henrycgbaker",
+  "conclusion": "previewed",
+  "counts": {},
+  "finished": "2026-09-24T10:15:18Z",
+  "op": "assignment.generate_syllabus",
+  "people": [],
+  "preview": true,
+  "reasons": [],
+  "run_id": 35986111644,
+  "schema": "dsl.outcome/1",
+  "started": "2026-09-24T10:15:14Z",
+  "summary": "Preview finished; nothing was changed."
+}
