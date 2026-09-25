@@ -7,7 +7,7 @@
     "teams.csv": "0e32a2a48d75d1d688492b61a27c4cea67565d17",
     "grading_sheets": "6488284233a23832e7d2b2c8ca90e3f7d3312426",
     "course/dsl-course.yml": "276278ab95afd72300e49c2a3c8a47f541ea29cc",
-    ".system/assignments.lock.yml": "27bfba24c4b26075b2b4ecb67748d95601a3358f"
+    ".system/assignments.lock.yml": "fec989d4c45286c90c6abbd037aeff106a1e7b49"
   },
   "course": {
     "org": "hertie-dsl-demo-course-e1234",
@@ -19,11 +19,12 @@
       "C2": "done",
       "C3": "done",
       "C4": "todo",
-      "C5": "done",
+      "C5": "problem",
       "C6": "done"
     },
     "stage_why": {
-      "C4": "course-materials-f2025's SYLLABUS.md is still the placeholder."
+      "C4": "course-materials-f2025's SYLLABUS.md is still the placeholder.",
+      "C5": "8 problems need fixing."
     },
     "ready": false,
     "materials": [
@@ -40,37 +41,37 @@
       {
         "repo": "assignment-1-f2026",
         "slug": "assignment-1",
-        "state": "ready"
+        "state": "problem"
       },
       {
         "repo": "assignment-2-f2026",
         "slug": "assignment-2",
-        "state": "ready"
+        "state": "problem"
       },
       {
         "repo": "assignment-3-project-f2026",
         "slug": "assignment-3-project",
-        "state": "ready"
+        "state": "problem"
       },
       {
         "repo": "assignment-4-f2026",
         "slug": "assignment-4",
-        "state": "ready"
+        "state": "problem"
       },
       {
         "repo": "assignment-5-f2026",
         "slug": "assignment-5",
-        "state": "ready"
+        "state": "problem"
       },
       {
         "repo": "assignment-6-f2026",
         "slug": "assignment-6",
-        "state": "ready"
+        "state": "problem"
       },
       {
         "repo": "assignment-7-f2026",
         "slug": "assignment-7",
-        "state": "ready"
+        "state": "problem"
       }
     ],
     "semesters": [
@@ -89,134 +90,132 @@
     "app_installed": null,
     "stages": {
       "K1": "done",
-      "K2": "problem",
+      "K2": "done",
       "K3": "todo",
-      "K4": "done",
+      "K4": "problem",
       "K5": "done",
       "K6": "done",
       "K7": "todo"
     },
     "stage_why": {
-      "K2": "1 problem needs fixing.",
       "K3": "No instructor is declared in instructors.yml yet.",
+      "K4": "7 problems need fixing.",
       "K7": "Not archived yet; the schedule archives it on Tue 12 Jan."
     },
     "archive_date": "2027-01-12"
   },
   "problems": [
     {
-      "id": "sheet:assignment-3-project:GRADING_SHEETS",
+      "id": "schedule:assignment-2:NOT_MIGRATED",
       "scope": "semester",
-      "stage": "marking",
-      "text": "Line 47 of the assignment-3-project marking sheet lists a student who is also in another team or entry, so marks for both are held.",
-      "stops": "That sheet is not updated, and none of its marks are returned.",
+      "stage": "K4",
+      "text": "Schedule entry assignment-2: NOT_MIGRATED: grading_datetime is no longer read here.",
+      "stops": "The late cutoff is the due date plus late_window_days (assignments.yml); run the migration - entry dropped: no hand out, freeze or marking until fixed.",
       "fix": {
         "repo": "hertie-dsl-demo-f2026/semester-config",
-        "path": "grading_sheets/assignment-3-project.yml",
-        "line": 47,
-        "screen": "marks",
+        "path": "schedule.yml",
+        "line": 285,
+        "screen": "schedule",
+        "entry": "assignment-2"
+      }
+    },
+    {
+      "id": "schedule:assignment-3-project:NOT_MIGRATED",
+      "scope": "semester",
+      "stage": "K4",
+      "text": "Schedule entry assignment-3-project: NOT_MIGRATED: grading_datetime is no longer read here.",
+      "stops": "The late cutoff is the due date plus late_window_days (assignments.yml); run the migration - entry dropped: no hand out, freeze or marking until fixed.",
+      "fix": {
+        "repo": "hertie-dsl-demo-f2026/semester-config",
+        "path": "schedule.yml",
+        "line": 292,
+        "screen": "schedule",
         "entry": "assignment-3-project"
       }
     },
     {
-      "id": "sheet:assignment-3-project:GRADING_SHEETS:2",
+      "id": "schedule:assignment-4:NOT_MIGRATED",
       "scope": "semester",
-      "stage": "marking",
-      "text": "Line 99 of the assignment-3-project marking sheet lists a student who is also in another team or entry, so marks for both are held.",
-      "stops": "That sheet is not updated, and none of its marks are returned.",
+      "stage": "K4",
+      "text": "Schedule entry assignment-4: NOT_MIGRATED: grading_datetime is no longer read here.",
+      "stops": "The late cutoff is the due date plus late_window_days (assignments.yml); run the migration - entry dropped: no hand out, freeze or marking until fixed.",
       "fix": {
         "repo": "hertie-dsl-demo-f2026/semester-config",
-        "path": "grading_sheets/assignment-3-project.yml",
-        "line": 99,
-        "screen": "marks",
-        "entry": "assignment-3-project"
+        "path": "schedule.yml",
+        "line": 299,
+        "screen": "schedule",
+        "entry": "assignment-4"
       }
     },
     {
-      "id": "sheet:assignment-3-project:GRADING_SHEETS:3",
+      "id": "schedule:assignment-5:NOT_MIGRATED",
       "scope": "semester",
-      "stage": "marking",
-      "text": "Line 115 of the assignment-3-project marking sheet lists a student who is also in another team or entry, so marks for both are held.",
-      "stops": "That sheet is not updated, and none of its marks are returned.",
+      "stage": "K4",
+      "text": "Schedule entry assignment-5: NOT_MIGRATED: grading_datetime is no longer read here.",
+      "stops": "The late cutoff is the due date plus late_window_days (assignments.yml); run the migration - entry dropped: no hand out, freeze or marking until fixed.",
       "fix": {
         "repo": "hertie-dsl-demo-f2026/semester-config",
-        "path": "grading_sheets/assignment-3-project.yml",
-        "line": 115,
-        "screen": "marks",
-        "entry": "assignment-3-project"
+        "path": "schedule.yml",
+        "line": 306,
+        "screen": "schedule",
+        "entry": "assignment-5"
       }
     },
     {
-      "id": "sheet:assignment-3-project:GRADING_SHEETS:4",
+      "id": "schedule:assignment-6:NOT_MIGRATED",
       "scope": "semester",
-      "stage": "marking",
-      "text": "Line 131 of the assignment-3-project marking sheet lists a student who is also in another team or entry, so marks for both are held.",
-      "stops": "That sheet is not updated, and none of its marks are returned.",
+      "stage": "K4",
+      "text": "Schedule entry assignment-6: NOT_MIGRATED: grading_datetime is no longer read here.",
+      "stops": "The late cutoff is the due date plus late_window_days (assignments.yml); run the migration - entry dropped: no hand out, freeze or marking until fixed.",
       "fix": {
         "repo": "hertie-dsl-demo-f2026/semester-config",
-        "path": "grading_sheets/assignment-3-project.yml",
-        "line": 131,
-        "screen": "marks",
-        "entry": "assignment-3-project"
+        "path": "schedule.yml",
+        "line": 313,
+        "screen": "schedule",
+        "entry": "assignment-6"
       }
     },
     {
-      "id": "sheet:assignment-3-project:GRADING_SHEETS:5",
+      "id": "schedule:assignment-7:NOT_MIGRATED",
       "scope": "semester",
-      "stage": "marking",
-      "text": "Line 147 of the assignment-3-project marking sheet lists a student who is also in another team or entry, so marks for both are held.",
-      "stops": "That sheet is not updated, and none of its marks are returned.",
+      "stage": "K4",
+      "text": "Schedule entry assignment-7: NOT_MIGRATED: grading_datetime is no longer read here.",
+      "stops": "The late cutoff is the due date plus late_window_days (assignments.yml); run the migration - entry dropped: no hand out, freeze or marking until fixed.",
       "fix": {
         "repo": "hertie-dsl-demo-f2026/semester-config",
-        "path": "grading_sheets/assignment-3-project.yml",
-        "line": 147,
-        "screen": "marks",
-        "entry": "assignment-3-project"
+        "path": "schedule.yml",
+        "line": 320,
+        "screen": "schedule",
+        "entry": "assignment-7"
       }
     },
     {
-      "id": "template:assignment-1:GRADING_CONFIG",
+      "id": "schedule:assignment-1:NOT_MIGRATED",
       "scope": "semester",
-      "stage": "open",
-      "text": "assignment-1's settings say its repos are private, but 1 of 1 handed out in this semester are not.",
-      "stops": "Those repos stay as they are, and the pages the toolkit writes describe them wrongly.",
+      "stage": "K4",
+      "text": "Schedule entry assignment-1: NOT_MIGRATED: title is no longer read here.",
+      "stops": "The assignment's name is title in its template's grading_config.yml; run the migration.",
+      "fix": {
+        "repo": "hertie-dsl-demo-f2026/semester-config",
+        "path": "schedule.yml",
+        "line": 274,
+        "screen": "schedule",
+        "entry": "assignment-1"
+      }
+    },
+    {
+      "id": "template:assignment-1:NOT_MIGRATED",
+      "scope": "course",
+      "stage": "C5",
+      "text": "The assignment-1 template's settings: grading_config.yml: NOT_MIGRATED: late_window_days is no longer read here.",
+      "stops": "It is set per semester in semester-config/assignments.yml, where the migration moves it; run the migration - the whole file is refused, so the assignment is not handed out or marked until it is.",
       "fix": {
         "repo": "hertie-dsl-demo-course-e1234/assignment-1-f2026",
         "path": "grading_config.yml",
-        "line": 8,
+        "line": 15,
         "screen": "template",
         "entry": "assignment-1",
         "ref": "solution"
-      }
-    },
-    {
-      "id": "template:assignment-3-project:GRADING_CONFIG",
-      "scope": "semester",
-      "stage": "open",
-      "text": "assignment-3-project's settings say its repos are private, but 3 of 8 handed out in this semester are not.",
-      "stops": "Those repos stay as they are, and the pages the toolkit writes describe them wrongly.",
-      "fix": {
-        "repo": "hertie-dsl-demo-course-e1234/assignment-3-project-f2026",
-        "path": "grading_config.yml",
-        "line": 8,
-        "screen": "template",
-        "entry": "assignment-3-project",
-        "ref": "solution"
-      }
-    },
-    {
-      "id": "org:org-settings:ORG_SETTINGS",
-      "scope": "semester",
-      "stage": "K2",
-      "text": "This semester's GitHub member privileges do not suit an assignment that lets students choose their repo's visibility.",
-      "stops": "A student can delete or move their own submission.",
-      "fix": {
-        "repo": "hertie-dsl-demo-f2026/semester-config",
-        "path": "",
-        "line": null,
-        "screen": null,
-        "entry": null,
-        "url": "https://github.com/organizations/hertie-dsl-demo-f2026/settings/member_privileges"
       }
     }
   ],
@@ -227,13 +226,6 @@
       "ref": "lecture-09",
       "title": "Further topics in deep learning",
       "state": "planned"
-    },
-    {
-      "when": "2026-09-29T23:59:00+02:00",
-      "kind": "due",
-      "ref": "assignment-2",
-      "title": "Classification and evaluation",
-      "state": "open"
     },
     {
       "when": "2026-10-01T09:00:00+02:00",
@@ -789,7 +781,7 @@
   "assignments": [
     {
       "slug": "assignment-1",
-      "title": "Linear regression from scratch",
+      "title": "Assignment 1 - linear regression from scratch (individual)",
       "template": "assignment-1-f2026",
       "state": "marking",
       "handout": "2026-08-18T14:00:00+02:00",
@@ -811,241 +803,16 @@
           "source": "institution"
         },
         "max_team_size": {
-          "value": 4,
-          "source": "course"
+          "value": null,
+          "source": "institution"
         },
         "late_window_days": {
           "value": 10,
-          "source": "assignment"
+          "source": "institution"
         },
         "late_penalty_per_day": {
           "value": "10%",
-          "source": "assignment"
-        },
-        "visibility": {
-          "value": "private",
-          "source": "assignment"
-        },
-        "submit_url": {
-          "value": "",
           "source": "institution"
-        }
-      }
-    },
-    {
-      "slug": "assignment-2",
-      "title": "Classification and evaluation",
-      "template": "assignment-2-f2026",
-      "state": "open",
-      "handout": "2026-09-01T14:00:00+02:00",
-      "due": "2026-09-29T23:59:00+02:00",
-      "grading_cutoff_datetime": "2026-09-29T23:59:00+02:00",
-      "solution_shown": null,
-      "units": 1,
-      "submissions": null,
-      "teams": null,
-      "marks": {
-        "filled": 0,
-        "total": 1
-      },
-      "returned": false,
-      "problem": false,
-      "settings": {
-        "team_formation": {
-          "value": "self_select",
-          "source": "institution"
-        },
-        "max_team_size": {
-          "value": 4,
-          "source": "course"
-        },
-        "late_window_days": {
-          "value": 10,
-          "source": "assignment"
-        },
-        "late_penalty_per_day": {
-          "value": "10%",
-          "source": "assignment"
-        },
-        "visibility": {
-          "value": "private",
-          "source": "assignment"
-        },
-        "submit_url": {
-          "value": "",
-          "source": "institution"
-        }
-      }
-    },
-    {
-      "slug": "assignment-3-project",
-      "title": "Group project",
-      "template": "assignment-3-project-f2026",
-      "state": "open",
-      "handout": "2026-09-15T14:00:00+02:00",
-      "due": "2026-10-23T23:59:00+02:00",
-      "grading_cutoff_datetime": "2026-10-26T23:59:00+01:00",
-      "solution_shown": null,
-      "units": 8,
-      "submissions": 0,
-      "teams": 1,
-      "marks": {
-        "filled": 0,
-        "total": 9
-      },
-      "returned": false,
-      "problem": true,
-      "settings": {
-        "team_formation": {
-          "value": "self_select",
-          "source": "assignment"
-        },
-        "max_team_size": {
-          "value": 3,
-          "source": "assignment"
-        },
-        "late_window_days": {
-          "value": 10,
-          "source": "assignment"
-        },
-        "late_penalty_per_day": {
-          "value": "10%",
-          "source": "assignment"
-        },
-        "visibility": {
-          "value": "private",
-          "source": "assignment"
-        },
-        "submit_url": {
-          "value": "",
-          "source": "institution"
-        }
-      }
-    },
-    {
-      "slug": "assignment-4",
-      "title": "Hackathon showcase",
-      "template": "assignment-4-f2026",
-      "state": "marking",
-      "handout": "2026-09-17T04:35:00+02:00",
-      "due": "2026-09-20T23:59:00+02:00",
-      "grading_cutoff_datetime": "2026-09-21T23:59:00+02:00",
-      "solution_shown": null,
-      "units": 1,
-      "submissions": 1,
-      "teams": null,
-      "marks": {
-        "filled": 1,
-        "total": 1
-      },
-      "returned": false,
-      "problem": false,
-      "settings": {
-        "team_formation": {
-          "value": "self_select",
-          "source": "institution"
-        },
-        "max_team_size": {
-          "value": 4,
-          "source": "course"
-        },
-        "late_window_days": {
-          "value": 10,
-          "source": "assignment"
-        },
-        "late_penalty_per_day": {
-          "value": "10%",
-          "source": "assignment"
-        },
-        "visibility": {
-          "value": "public",
-          "source": "assignment"
-        },
-        "submit_url": {
-          "value": "",
-          "source": "institution"
-        }
-      }
-    },
-    {
-      "slug": "assignment-5",
-      "title": "Portfolio piece",
-      "template": "assignment-5-f2026",
-      "state": "marking",
-      "handout": "2026-09-17T04:35:00+02:00",
-      "due": "2026-09-20T23:59:00+02:00",
-      "grading_cutoff_datetime": "2026-09-21T23:59:00+02:00",
-      "solution_shown": null,
-      "units": 1,
-      "submissions": 1,
-      "teams": null,
-      "marks": {
-        "filled": 1,
-        "total": 1
-      },
-      "returned": false,
-      "problem": false,
-      "settings": {
-        "team_formation": {
-          "value": "self_select",
-          "source": "institution"
-        },
-        "max_team_size": {
-          "value": 4,
-          "source": "course"
-        },
-        "late_window_days": {
-          "value": 10,
-          "source": "assignment"
-        },
-        "late_penalty_per_day": {
-          "value": "10%",
-          "source": "assignment"
-        },
-        "visibility": {
-          "value": "student_choice",
-          "source": "assignment"
-        },
-        "submit_url": {
-          "value": "",
-          "source": "institution"
-        }
-      }
-    },
-    {
-      "slug": "assignment-6",
-      "title": "Referee reports",
-      "template": "assignment-6-f2026",
-      "state": "marking",
-      "handout": "2026-09-17T04:35:00+02:00",
-      "due": "2026-09-20T23:59:00+02:00",
-      "grading_cutoff_datetime": "2026-09-21T23:59:00+02:00",
-      "solution_shown": null,
-      "units": 1,
-      "submissions": 1,
-      "teams": null,
-      "marks": {
-        "filled": 1,
-        "total": 1
-      },
-      "returned": false,
-      "problem": false,
-      "settings": {
-        "team_formation": {
-          "value": "self_select",
-          "source": "institution"
-        },
-        "max_team_size": {
-          "value": 4,
-          "source": "course"
-        },
-        "late_window_days": {
-          "value": 10,
-          "source": "assignment"
-        },
-        "late_penalty_per_day": {
-          "value": "10%",
-          "source": "assignment"
         },
         "visibility": {
           "value": "private",
@@ -1054,51 +821,6 @@
         "submit_url": {
           "value": "",
           "source": "institution"
-        }
-      }
-    },
-    {
-      "slug": "assignment-7",
-      "title": "Moodle essay",
-      "template": "assignment-7-f2026",
-      "state": "marking",
-      "handout": "2026-09-17T04:35:00+02:00",
-      "due": "2026-09-20T23:59:00+02:00",
-      "grading_cutoff_datetime": "2026-09-21T23:59:00+02:00",
-      "solution_shown": null,
-      "units": 0,
-      "submissions": null,
-      "teams": null,
-      "marks": {
-        "filled": 1,
-        "total": 1
-      },
-      "returned": false,
-      "problem": false,
-      "settings": {
-        "team_formation": {
-          "value": "self_select",
-          "source": "institution"
-        },
-        "max_team_size": {
-          "value": 4,
-          "source": "course"
-        },
-        "late_window_days": {
-          "value": 10,
-          "source": "assignment"
-        },
-        "late_penalty_per_day": {
-          "value": "10%",
-          "source": "assignment"
-        },
-        "visibility": {
-          "value": "private",
-          "source": "institution"
-        },
-        "submit_url": {
-          "value": "https://moodle.hertie-school.org/mod/assign/view.php?id=424242",
-          "source": "assignment"
         }
       }
     }
