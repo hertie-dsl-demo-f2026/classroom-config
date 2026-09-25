@@ -2,6 +2,7 @@
   "schema": "dsl.status/1",
   "inputs": {
     "schedule.yml": "bbfee2d888fa08ece698ac9c52616f1f2ea8803f",
+    "assignments.yml": "e3a937df4ae9a35238de5734e33b2b4adeced39d",
     "instructors.yml": "2ad6b323d858aaabc2f532648f72b7afa186473d",
     "students.csv": "7b2631aa950a9cc95779dadeacddd5c20975ae37",
     "teams.csv": "0e32a2a48d75d1d688492b61a27c4cea67565d17",
