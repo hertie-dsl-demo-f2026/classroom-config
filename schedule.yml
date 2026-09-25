@@ -209,7 +209,7 @@ releases:
     deploy:
       - course_source_repo: lecture-code-f2026
         course_source_path: dldemo/uncertainty.py
-        cohort_dest_path: code/dldemo/uncertainty.py
+        semester_dest_path: code/dldemo/uncertainty.py
 
   lab-09:
     event_datetime: 2026-10-01T14:00
@@ -234,7 +234,7 @@ releases:
     deploy:
       - course_source_repo: lecture-code-f2026
         course_source_path: dldemo/audit.py
-        cohort_dest_path: code/dldemo/audit.py
+        semester_dest_path: code/dldemo/audit.py
 
   readings-11:
     event_datetime: 2026-10-08T09:00
@@ -251,7 +251,7 @@ releases:
     deploy:
       - course_source_repo: lecture-code-f2026
         course_source_path: dldemo/serving.py
-        cohort_dest_path: code/dldemo/serving.py
+        semester_dest_path: code/dldemo/serving.py
 
   lab-11:
     event_datetime: 2026-10-15T14:00
@@ -323,17 +323,17 @@ assignments:
 events:
 
   midterm-exam:
-    type: exam
+    kind: exam
     title: "Midterm Exam"
     event_datetime: 2026-09-22T10:00
 
   final-exam:
-    type: exam
+    kind: exam
     title: "Final Exam"
     event_datetime: 2026-11-10T10:00
 
   resit-exam:
-    type: exam
+    kind: exam
     title: "Resit Exam"
     event_datetime: tbc
 
