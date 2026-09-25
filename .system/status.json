@@ -18,22 +18,22 @@
       "C1": "done",
       "C2": "done",
       "C3": "done",
-      "C4": "todo",
+      "C4": "problem",
       "C5": "done",
       "C6": "done"
     },
     "stage_why": {
-      "C4": "course-materials-f2025's SYLLABUS.md is still the placeholder."
+      "C4": "4 problems need fixing."
     },
     "ready": false,
     "materials": [
       {
         "repo": "course-materials-f2025",
-        "state": "todo"
+        "state": "problem"
       },
       {
         "repo": "course-materials-f2026",
-        "state": "ready"
+        "state": "problem"
       }
     ],
     "templates": [
@@ -216,6 +216,36 @@
         "entry": null,
         "url": "https://github.com/organizations/hertie-dsl-demo-f2026/settings/member_privileges"
       }
+    },
+    {
+      "id": "materials:course-materials-f2025:NOT_MIGRATED",
+      "scope": "course",
+      "stage": "C4",
+      "text": "course-materials-f2025 is a materials repo by its old name only: it has no dsl-materials topic yet.",
+      "stops": "Run the migration, which adds the topic.",
+      "fix": {
+        "repo": "hertie-dsl-demo-course-e1234/course-materials-f2025",
+        "path": "",
+        "line": null,
+        "screen": null,
+        "entry": null,
+        "url": "https://github.com/hertie-dsl-demo-course-e1234/course-materials-f2025"
+      }
+    },
+    {
+      "id": "materials:course-materials-f2026:NOT_MIGRATED",
+      "scope": "course",
+      "stage": "C4",
+      "text": "course-materials-f2026 is a materials repo by its old name only: it has no dsl-materials topic yet.",
+      "stops": "Run the migration, which adds the topic.",
+      "fix": {
+        "repo": "hertie-dsl-demo-course-e1234/course-materials-f2026",
+        "path": "",
+        "line": null,
+        "screen": null,
+        "entry": null,
+        "url": "https://github.com/hertie-dsl-demo-course-e1234/course-materials-f2026"
+      }
     }
   ],
   "this_week": [
@@ -253,6 +283,8 @@
       "id": "course-intro",
       "when": "2026-07-28T09:00:00+02:00",
       "kind": "lecture",
+      "kind_inferred": true,
+      "number": null,
       "title": "",
       "state": "released",
       "source": {
@@ -270,7 +302,9 @@
     {
       "id": "readings-01",
       "when": "2026-07-30T09:00:00+02:00",
-      "kind": "lecture",
+      "kind": "readings",
+      "kind_inferred": true,
+      "number": null,
       "title": "",
       "state": "released",
       "source": {
@@ -289,6 +323,8 @@
       "id": "lecture-01",
       "when": "2026-08-04T10:00:00+02:00",
       "kind": "lecture",
+      "kind_inferred": true,
+      "number": 1,
       "title": "Deep learning in public policy",
       "state": "released",
       "source": {
@@ -306,7 +342,9 @@
     {
       "id": "readings-02",
       "when": "2026-08-06T09:00:00+02:00",
-      "kind": "lecture",
+      "kind": "readings",
+      "kind_inferred": true,
+      "number": null,
       "title": "",
       "state": "released",
       "source": {
@@ -325,6 +363,8 @@
       "id": "lab-01",
       "when": "2026-08-06T14:00:00+02:00",
       "kind": "lab",
+      "kind_inferred": true,
+      "number": 1,
       "title": "Lab 1",
       "state": "released",
       "source": {
@@ -343,6 +383,8 @@
       "id": "lecture-02",
       "when": "2026-08-11T10:00:00+02:00",
       "kind": "lecture",
+      "kind_inferred": true,
+      "number": 2,
       "title": "Deep neural networks (1)",
       "state": "released",
       "source": {
@@ -360,7 +402,9 @@
     {
       "id": "readings-03",
       "when": "2026-08-13T09:00:00+02:00",
-      "kind": "lecture",
+      "kind": "readings",
+      "kind_inferred": true,
+      "number": null,
       "title": "",
       "state": "released",
       "source": {
@@ -379,6 +423,8 @@
       "id": "lab-02",
       "when": "2026-08-13T14:00:00+02:00",
       "kind": "lab",
+      "kind_inferred": true,
+      "number": 2,
       "title": "Lab 2",
       "state": "released",
       "source": {
@@ -397,6 +443,8 @@
       "id": "lecture-03",
       "when": "2026-08-18T10:00:00+02:00",
       "kind": "lecture",
+      "kind_inferred": true,
+      "number": 3,
       "title": "Deep neural networks (2)",
       "state": "released",
       "source": {
@@ -414,7 +462,9 @@
     {
       "id": "readings-04",
       "when": "2026-08-20T09:00:00+02:00",
-      "kind": "lecture",
+      "kind": "readings",
+      "kind_inferred": true,
+      "number": null,
       "title": "",
       "state": "released",
       "source": {
@@ -433,6 +483,8 @@
       "id": "lab-03",
       "when": "2026-08-20T14:00:00+02:00",
       "kind": "lab",
+      "kind_inferred": true,
+      "number": 3,
       "title": "Lab 3",
       "state": "released",
       "source": {
@@ -451,6 +503,8 @@
       "id": "lecture-04",
       "when": "2026-08-25T10:00:00+02:00",
       "kind": "lecture",
+      "kind_inferred": true,
+      "number": 4,
       "title": "Computer vision (1): Convolutional neural networks",
       "state": "released",
       "source": {
@@ -468,7 +522,9 @@
     {
       "id": "readings-05",
       "when": "2026-08-27T09:00:00+02:00",
-      "kind": "lecture",
+      "kind": "readings",
+      "kind_inferred": true,
+      "number": null,
       "title": "",
       "state": "released",
       "source": {
@@ -487,6 +543,8 @@
       "id": "lab-04",
       "when": "2026-08-27T14:00:00+02:00",
       "kind": "lab",
+      "kind_inferred": true,
+      "number": 4,
       "title": "Lab 4",
       "state": "released",
       "source": {
@@ -505,6 +563,8 @@
       "id": "lecture-05",
       "when": "2026-09-01T10:00:00+02:00",
       "kind": "lecture",
+      "kind_inferred": true,
+      "number": 5,
       "title": "Computer vision (2): Modern CNNs, implementation and applications",
       "state": "released",
       "source": {
@@ -523,6 +583,8 @@
       "id": "lab-05",
       "when": "2026-09-03T14:00:00+02:00",
       "kind": "lab",
+      "kind_inferred": true,
+      "number": 5,
       "title": "Lab 5",
       "state": "released",
       "source": {
@@ -541,6 +603,8 @@
       "id": "lecture-06",
       "when": "2026-09-08T10:00:00+02:00",
       "kind": "lecture",
+      "kind_inferred": true,
+      "number": 6,
       "title": "Sequence methods and time-series analysis",
       "state": "released",
       "source": {
@@ -559,6 +623,8 @@
       "id": "lab-06",
       "when": "2026-09-10T14:00:00+02:00",
       "kind": "lab",
+      "kind_inferred": true,
+      "number": 6,
       "title": "Lab 6",
       "state": "released",
       "source": {
@@ -577,6 +643,8 @@
       "id": "lecture-07",
       "when": "2026-09-15T10:00:00+02:00",
       "kind": "lecture",
+      "kind_inferred": true,
+      "number": 7,
       "title": "Natural language processing (1)",
       "state": "released",
       "source": {
@@ -594,7 +662,9 @@
     {
       "id": "readings-08",
       "when": "2026-09-17T09:00:00+02:00",
-      "kind": "lecture",
+      "kind": "readings",
+      "kind_inferred": true,
+      "number": null,
       "title": "",
       "state": "released",
       "source": {
@@ -613,6 +683,8 @@
       "id": "lecture-08",
       "when": "2026-09-22T10:00:00+02:00",
       "kind": "lecture",
+      "kind_inferred": true,
+      "number": 8,
       "title": "Natural language processing (2): Encoder-decoder architecture and attention",
       "state": "released",
       "source": {
@@ -630,7 +702,9 @@
     {
       "id": "readings-09",
       "when": "2026-09-24T09:00:00+02:00",
-      "kind": "lecture",
+      "kind": "readings",
+      "kind_inferred": true,
+      "number": null,
       "title": "",
       "state": "released",
       "source": {
@@ -649,6 +723,8 @@
       "id": "lecture-09",
       "when": "2026-09-29T10:00:00+02:00",
       "kind": "lecture",
+      "kind_inferred": true,
+      "number": 9,
       "title": "Further topics in deep learning",
       "state": "planned",
       "source": {
@@ -666,7 +742,9 @@
     {
       "id": "readings-10",
       "when": "2026-10-01T09:00:00+02:00",
-      "kind": "lecture",
+      "kind": "readings",
+      "kind_inferred": true,
+      "number": null,
       "title": "",
       "state": "planned",
       "source": {
@@ -685,6 +763,8 @@
       "id": "lab-09",
       "when": "2026-10-01T14:00:00+02:00",
       "kind": "lab",
+      "kind_inferred": true,
+      "number": 9,
       "title": "Lab 9",
       "state": "planned",
       "source": {
@@ -703,6 +783,8 @@
       "id": "lecture-10",
       "when": "2026-10-06T10:00:00+02:00",
       "kind": "lecture",
+      "kind_inferred": true,
+      "number": 10,
       "title": "Policy approaches to regulate deep learning",
       "state": "planned",
       "source": {
@@ -720,7 +802,9 @@
     {
       "id": "readings-11",
       "when": "2026-10-08T09:00:00+02:00",
-      "kind": "lecture",
+      "kind": "readings",
+      "kind_inferred": true,
+      "number": null,
       "title": "",
       "state": "released",
       "source": {
@@ -739,6 +823,8 @@
       "id": "lecture-11",
       "when": "2026-10-13T10:00:00+02:00",
       "kind": "lecture",
+      "kind_inferred": true,
+      "number": 11,
       "title": "Deep learning in practice",
       "state": "planned",
       "source": {
@@ -757,6 +843,8 @@
       "id": "lab-11",
       "when": "2026-10-15T14:00:00+02:00",
       "kind": "lab",
+      "kind_inferred": true,
+      "number": 11,
       "title": "Lab 11",
       "state": "planned",
       "source": {
@@ -774,7 +862,9 @@
     {
       "id": "lecture-12",
       "when": "2026-10-20T10:00:00+02:00",
-      "kind": null,
+      "kind": "lecture",
+      "kind_inferred": true,
+      "number": 12,
       "title": "Tutorial presentations",
       "state": "planned",
       "source": null,
