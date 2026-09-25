@@ -271,53 +271,40 @@ releases:
 assignments:
 
   assignment-1:
-    title: Linear regression from scratch
     course_source_repo: assignment-1-f2026
     handout_datetime: 2026-08-18T14:00
     due_datetime: 2026-09-08T23:59
     solution_datetime: 2026-09-15T09:00
 
   assignment-2:
-    title: Classification and evaluation
     course_source_repo: assignment-2-f2026
     handout_datetime: 2026-09-01T14:00
     due_datetime: 2026-09-29T23:59
-    grading_datetime: 2026-09-29T23:59
 
   assignment-3-project:
-    title: Group project
     course_source_repo: assignment-3-project-f2026
     handout_datetime: 2026-09-15T14:00
     due_datetime: 2026-10-23T23:59
-    grading_datetime: 2026-10-26T23:59
 
   assignment-4:
-    title: Hackathon showcase
     course_source_repo: assignment-4-f2026
     handout_datetime: 2026-09-17T04:35
     due_datetime: 2026-09-20T23:59
-    grading_datetime: 2026-09-21T23:59
 
   assignment-5:
-    title: Portfolio piece
     course_source_repo: assignment-5-f2026
     handout_datetime: 2026-09-17T04:35
     due_datetime: 2026-09-20T23:59
-    grading_datetime: 2026-09-21T23:59
 
   assignment-6:
-    title: Referee reports
     course_source_repo: assignment-6-f2026
     handout_datetime: 2026-09-17T04:35
     due_datetime: 2026-09-20T23:59
-    grading_datetime: 2026-09-21T23:59
 
   assignment-7:
-    title: Moodle essay
     course_source_repo: assignment-7-f2026
     handout_datetime: 2026-09-17T04:35
     due_datetime: 2026-09-20T23:59
-    grading_datetime: 2026-09-21T23:59
 
 # -------------------------------------------------------------------------------- events
 events:
