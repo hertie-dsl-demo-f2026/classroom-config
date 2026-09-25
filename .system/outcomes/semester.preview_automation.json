@@ -3,7 +3,7 @@
   "conclusion": "previewed",
   "counts": {},
   "finished": "2026-09-23T15:29:24Z",
-  "op": "cohort.preview_automation",
+  "op": "semester.preview_automation",
   "people": [],
   "preview": true,
   "reasons": [],

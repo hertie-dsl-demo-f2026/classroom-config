@@ -6,7 +6,7 @@
     "this_week": 3
   },
   "finished": "2026-09-23T16:45:36Z",
-  "op": "cohort.check",
+  "op": "semester.check",
   "people": [],
   "preview": false,
   "reasons": [],
