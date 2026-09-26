@@ -1195,6 +1195,13 @@
   },
   "operations": [
     {
+      "run_id": 36250473545,
+      "op": "site.update",
+      "conclusion": "nothing_to_do",
+      "summary": "Student site already up to date.",
+      "finished": "2026-09-26T15:01:59Z"
+    },
+    {
       "run_id": 36250360179,
       "op": "semester.preview_automation",
       "conclusion": "previewed",
