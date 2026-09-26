@@ -6,7 +6,7 @@
     "instructors.yml": "2ad6b323d858aaabc2f532648f72b7afa186473d",
     "students.csv": "de6de9d6f62fe00ec38971ff7082bc7321a442d1",
     "teams.csv": "0e32a2a48d75d1d688492b61a27c4cea67565d17",
-    "grading_sheets": "af4fa3b344c52f31f920a9ad63e3be4800a8dd44",
+    "grading_sheets": "195530133e7ba379e26a9df10fac1adb806c4fa1",
     "course/dsl-course.yml": "0db1f72468fb0f1d6518ddb3bc0f504dcbec7cef",
     ".system/assignments.lock.yml": "2f0bf27fd573ec57d86caa805cab8c50d3f6baeb"
   },
@@ -195,7 +195,7 @@
       "id": "assignments:assignment-1:ASSIGNMENTS",
       "scope": "semester",
       "stage": "open",
-      "text": "assignment-1's settings say its repos are private, but 1 of 1 handed out in this semester are not.",
+      "text": "assignment-1's settings say its repos are private, but 1 of 2 handed out in this semester are not.",
       "stops": "Those repos stay as they are, and the pages the toolkit writes describe them wrongly.",
       "fix": {
         "repo": "hertie-dsl-demo-f2026/semester-config",
@@ -871,12 +871,12 @@
       "due": "2026-09-08T23:59:00+02:00",
       "grading_cutoff_datetime": "2026-09-18T23:59:00+02:00",
       "solution_shown": "2026-09-15T09:00:00+02:00",
-      "units": 1,
+      "units": 2,
       "submissions": 1,
       "teams": null,
       "marks": {
         "filled": 0,
-        "total": 1
+        "total": 2
       },
       "returned": false,
       "problem": true,
@@ -1190,8 +1190,8 @@
   },
   "site": {
     "url": "https://hertie-dsl-demo-f2026.github.io",
-    "last_update": "2026-09-26T10:13:34+00:00",
-    "stale": true
+    "last_update": "2026-09-26T11:06:47+00:00",
+    "stale": false
   },
   "operations": [
     {
