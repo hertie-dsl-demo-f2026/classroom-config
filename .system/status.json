@@ -25,7 +25,7 @@
     },
     "stage_why": {
       "C4": "course-materials-f2025 has no SYLLABUS.md yet.",
-      "C5": "4 assignment templates are not ready yet; the first: assignment-90-e2e931eef-external's README.md is still the placeholder."
+      "C5": "5 assignment templates are not ready yet; the first: assignment-90-e2e931eef-external's README.md is still the placeholder."
     },
     "ready": false,
     "materials": [
@@ -87,6 +87,11 @@
       {
         "repo": "assignment-90-e2e931eef-public",
         "slug": "assignment-90-e2e931eef-public",
+        "state": "todo"
+      },
+      {
+        "repo": "assignment-90-e2e931eef-shared",
+        "slug": "assignment-90-e2e931eef-shared",
         "state": "todo"
       },
       {
