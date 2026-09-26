@@ -1,7 +1,7 @@
 {
   "schema": "dsl.status/1",
   "inputs": {
-    "schedule.yml": "bbfee2d888fa08ece698ac9c52616f1f2ea8803f",
+    "schedule.yml": "0c69ed45c536169ac1082db3253e767a13342116",
     "assignments.yml": "e3a937df4ae9a35238de5734e33b2b4adeced39d",
     "instructors.yml": "2ad6b323d858aaabc2f532648f72b7afa186473d",
     "students.csv": "de6de9d6f62fe00ec38971ff7082bc7321a442d1",
@@ -116,7 +116,7 @@
       "fix": {
         "repo": "hertie-dsl-demo-f2026/semester-config",
         "path": "schedule.yml",
-        "line": 287,
+        "line": 285,
         "screen": "schedule",
         "entry": "assignment-3-project"
       }
@@ -1191,7 +1191,7 @@
   "site": {
     "url": "https://hertie-dsl-demo-f2026.github.io",
     "last_update": "2026-09-26T15:20:15+00:00",
-    "stale": false
+    "stale": true
   },
   "operations": [
     {
