@@ -8,7 +8,7 @@
     "teams.csv": "0e32a2a48d75d1d688492b61a27c4cea67565d17",
     "grading_sheets": "af4fa3b344c52f31f920a9ad63e3be4800a8dd44",
     "course/dsl-course.yml": "0db1f72468fb0f1d6518ddb3bc0f504dcbec7cef",
-    ".system/assignments.lock.yml": "27bfba24c4b26075b2b4ecb67748d95601a3358f"
+    ".system/assignments.lock.yml": "2f0bf27fd573ec57d86caa805cab8c50d3f6baeb"
   },
   "course": {
     "org": "hertie-dsl-demo-course-e1234",
