@@ -28,27 +28,6 @@
 #     semester_dest_repo: assignment-1-resit   # OPTIONAL - default: the key. What this semester's repos are called
 
 assignments:
-# dsl-e2e:e2e931eef begin
-  assignment-90-e2e931eef-private:
-    late_window_days: 1
-    late_penalty_per_day: 10%
-    visibility: private
-  assignment-90-e2e931eef-public:
-    late_window_days: 1
-    late_penalty_per_day: 10%
-    visibility: public
-  assignment-90-e2e931eef-student-choice:
-    late_window_days: 1
-    late_penalty_per_day: 10%
-    visibility: student_choice
-  assignment-90-e2e931eef-external:
-    late_window_days: 1
-    late_penalty_per_day: 10%
-    submit_url: https://example.org/e2e/submit
-  assignment-90-e2e931eef-shared:
-    late_window_days: 1
-    late_penalty_per_day: 10%
-# dsl-e2e:e2e931eef end
   assignment-2:
     late_window_days: 0
     late_penalty_per_day: 10%
