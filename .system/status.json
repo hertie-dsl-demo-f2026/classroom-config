@@ -20,12 +20,11 @@
       "C2": "done",
       "C3": "done",
       "C4": "todo",
-      "C5": "todo",
+      "C5": "done",
       "C6": "done"
     },
     "stage_why": {
-      "C4": "course-materials-f2025 has no SYLLABUS.md yet.",
-      "C5": "assignment-90-f2026's README.md is still the placeholder."
+      "C4": "course-materials-f2025 has no SYLLABUS.md yet."
     },
     "ready": false,
     "materials": [
@@ -73,11 +72,6 @@
         "repo": "assignment-7-f2026",
         "slug": "assignment-7",
         "state": "ready"
-      },
-      {
-        "repo": "assignment-90-f2026",
-        "slug": "assignment-90",
-        "state": "todo"
       }
     ],
     "semesters": [
