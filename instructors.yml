@@ -33,8 +33,4 @@ instructors:
     url: "https://www.hertie-school.org/en/who-we-are/profile/person/baker"
     start: "2026-08-01"
     end: "2027-01-31"
-  - github_handle: test-user-dsl
-    email: h.baker@hertie-school.org
-    role: instructor
-    name: Inspection TA
 
