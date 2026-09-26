@@ -3,7 +3,7 @@
   "inputs": {
     "schedule.yml": "bbfee2d888fa08ece698ac9c52616f1f2ea8803f",
     "assignments.yml": "e3a937df4ae9a35238de5734e33b2b4adeced39d",
-    "instructors.yml": "2ad6b323d858aaabc2f532648f72b7afa186473d",
+    "instructors.yml": "e9c5cdcfe1d606372da8a3839993e280adbf7184",
     "students.csv": "de6de9d6f62fe00ec38971ff7082bc7321a442d1",
     "teams.csv": "0e32a2a48d75d1d688492b61a27c4cea67565d17",
     "grading_sheets": "6e3e69b358b4f0055808522bbd5be4dce654ac0b",
@@ -91,7 +91,7 @@
     "stages": {
       "K1": "done",
       "K2": "problem",
-      "K3": "todo",
+      "K3": "done",
       "K4": "problem",
       "K5": "todo",
       "K6": "done",
@@ -99,7 +99,6 @@
     },
     "stage_why": {
       "K2": "1 problem needs fixing.",
-      "K3": "No instructor is declared in instructors.yml yet.",
       "K4": "1 problem needs fixing.",
       "K5": "1 student has not been sent a code yet.",
       "K7": "Not archived yet; the schedule archives it on Tue 12 Jan."
@@ -1184,13 +1183,13 @@
     "joined": 2
   },
   "staff": {
-    "instructors": 0,
+    "instructors": 1,
     "tas": 1,
     "synced": false
   },
   "site": {
     "url": "https://hertie-dsl-demo-f2026.github.io",
-    "last_update": "2026-09-26T11:06:47+00:00",
+    "last_update": "2026-09-26T15:17:37+00:00",
     "stale": false
   },
   "operations": [
