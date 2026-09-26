@@ -1,0 +1,22 @@
+{
+  "actor": "henrycgbaker",
+  "block": "",
+  "conclusion": "previewed",
+  "counts": {
+    "emails": 0,
+    "failed": 0,
+    "gradebooks": 2,
+    "held": 0,
+    "unknown": 0
+  },
+  "details": [],
+  "finished": "2026-09-26T15:10:49Z",
+  "op": "grades.return",
+  "people": [],
+  "preview": true,
+  "reasons": [],
+  "run_id": 36251006346,
+  "schema": "dsl.outcome/1",
+  "started": "2026-09-26T15:10:41Z",
+  "summary": "Preview: 2 marks repos would be updated and 1 email sent."
+}
