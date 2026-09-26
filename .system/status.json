@@ -1191,7 +1191,7 @@
   "site": {
     "url": "https://hertie-dsl-demo-f2026.github.io",
     "last_update": "2026-09-26T15:24:18+00:00",
-    "stale": false
+    "stale": true
   },
   "operations": [
     {
