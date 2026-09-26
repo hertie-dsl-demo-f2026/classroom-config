@@ -6,7 +6,7 @@
     "instructors.yml": "2ad6b323d858aaabc2f532648f72b7afa186473d",
     "students.csv": "7b2631aa950a9cc95779dadeacddd5c20975ae37",
     "teams.csv": "0e32a2a48d75d1d688492b61a27c4cea67565d17",
-    "grading_sheets": "f435581e88ef3afd4a6e76b60ac2e90ebdb9596d",
+    "grading_sheets": "d517aec1d37660a57996aed120264da15b96ff4c",
     "course/dsl-course.yml": "0db1f72468fb0f1d6518ddb3bc0f504dcbec7cef",
     ".system/assignments.lock.yml": "d1c12a9c2e9c0670f54e59fc675fd7d82f2a3515"
   },
@@ -1132,11 +1132,11 @@
       "grading_cutoff_datetime": "2026-09-28T12:03:00+02:00",
       "solution_shown": null,
       "units": 0,
-      "submissions": null,
+      "submissions": 0,
       "teams": null,
       "marks": {
         "filled": 0,
-        "total": 0
+        "total": 1
       },
       "returned": false,
       "problem": false,
