@@ -67,33 +67,3 @@ assignments:
     team_formation_window: none
     team_formation_closes:
     team_formation_page:
-  assignment-90-e2e931eef-external:
-    team_formation: none
-    max_team_size: 4
-    team_formation_window: none
-    team_formation_closes:
-    team_formation_page:
-  assignment-90-e2e931eef-private:
-    team_formation: none
-    max_team_size: 4
-    team_formation_window: none
-    team_formation_closes:
-    team_formation_page:
-  assignment-90-e2e931eef-public:
-    team_formation: none
-    max_team_size: 4
-    team_formation_window: none
-    team_formation_closes:
-    team_formation_page:
-  assignment-90-e2e931eef-shared:
-    team_formation: none
-    max_team_size: 4
-    team_formation_window: none
-    team_formation_closes:
-    team_formation_page:
-  assignment-90-e2e931eef-student-choice:
-    team_formation: none
-    max_team_size: 4
-    team_formation_window: none
-    team_formation_closes:
-    team_formation_page:
