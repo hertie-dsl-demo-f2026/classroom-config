@@ -21,6 +21,6 @@ submissions:
       days_late: 1
       checked: 2026-09-26T12:13+02:00
     adjustment_individual:
-    feedback_individual:
-    notes_not_shared_with_students:
-    score_individual:
+    feedback_individual: e2e feedback for the student-choice student
+    notes_not_shared_with_students: e2e-private-sentinel-do-not-publish
+    score_individual: 88
