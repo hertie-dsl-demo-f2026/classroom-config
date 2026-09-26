@@ -32,7 +32,9 @@ releases:
   lecture-01:
     event_datetime: 2026-08-04T10:00
     title: "Deep learning in public policy"
-    details: What deep learning is, where it already sits in public-sector decision making, and what this course will and will not claim for it.
+    details: >
+      What deep learning is, where it already sits in public-sector decision making, and
+      what this course will and will not claim for it.
     deploy:
       - course_source_repo: course-materials-f2026
         course_source_path: lectures/01_deep-learning-in-public-policy
