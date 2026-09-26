@@ -1195,6 +1195,13 @@
   },
   "operations": [
     {
+      "run_id": 36250360179,
+      "op": "semester.preview_automation",
+      "conclusion": "previewed",
+      "summary": "Preview finished; nothing was changed.",
+      "finished": "2026-09-26T14:59:45Z"
+    },
+    {
       "run_id": 36250255375,
       "op": "semester.check",
       "conclusion": "done",
@@ -1207,13 +1214,6 @@
       "conclusion": "previewed",
       "summary": "Preview finished; nothing was changed.",
       "finished": "2026-09-24T10:15:18Z"
-    },
-    {
-      "run_id": 35881864735,
-      "op": "semester.preview_automation",
-      "conclusion": "previewed",
-      "summary": "Preview finished; nothing was changed.",
-      "finished": "2026-09-23T15:29:24Z"
     }
   ]
 }
