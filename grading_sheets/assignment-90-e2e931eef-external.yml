@@ -16,6 +16,6 @@
 submissions:
   henrycgbaker:
     adjustment_individual:
-    feedback_individual:
-    notes_not_shared_with_students:
-    score_individual:
+    feedback_individual: e2e feedback for the external student
+    notes_not_shared_with_students: e2e-private-sentinel-do-not-publish
+    score_individual: 88
